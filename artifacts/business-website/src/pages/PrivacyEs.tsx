@@ -1,3 +1,1 @@
-export default function PrivacyEs() {
-    return <div>Privacy ES</div>div>;
-}</div>
+export default function PrivacyEs() { return null; }
