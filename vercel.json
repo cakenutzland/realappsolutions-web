@@ -1,0 +1,9 @@
+{
+  "installCommand": "corepack enable && pnpm install --no-frozen-lockfile",
+  "buildCommand": "pnpm --filter @workspace/business-website build",
+  "outputDirectory": "artifacts/business-website/dist",
+  "framework": null,
+  "env": {
+    "BASE_PATH": "/"
+  }
+}
