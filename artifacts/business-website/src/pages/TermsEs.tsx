@@ -1,3 +1,1 @@
-export default function TermsEs() {
-    return <div>Terms ES</div>div>;
-}</div>
+export default function TermsEs() { return null; }
