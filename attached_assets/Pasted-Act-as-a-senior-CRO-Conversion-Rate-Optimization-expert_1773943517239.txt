@@ -1,0 +1,192 @@
+Act as a senior CRO (Conversion Rate Optimization) expert, UX strategist, and front-end QA engineer. Your task is to finalize, polish, and validate this website so it is fully optimized for conversions and ready to publish — WITHOUT breaking any existing functionality.
+
+CRITICAL RULES:
+1. DO NOT break or modify any working functionality (forms, buttons, routing, domain, integrations, WhatsApp behavior, animations).
+2. DO NOT change backend logic or deployment configuration.
+3. Maintain full responsiveness (desktop + mobile).
+4. Only improve copy, UI clarity, conversion flow, and trust.
+5. Keep design clean, modern, and premium.
+6. Avoid unnecessary redesign — optimize what already exists.
+7. Ensure performance remains stable (no heavy additions).
+
+---
+
+MAIN GOAL:
+Turn this website into a high-converting, trustworthy, sales-ready landing page that clearly communicates value and drives users to take action immediately.
+
+---
+
+SECTION-BY-SECTION IMPROVEMENTS:
+
+1) HERO SECTION (TOP OF PAGE)
+
+Add urgency badge directly under or above the headline:
+
+“⚡ Limited spots available this month”
+
+Improve main CTA button text:
+- Replace “Get Your App” with:
+→ “Get My App Started”
+
+Keep strong visual hierarchy and spacing.
+
+---
+
+2) TRUST + FRICTION REDUCTION (ADD BELOW HERO OR IN BENEFITS AREA)
+
+Add a short trust block with 3 bullets:
+
+✔ No technical skills needed  
+✔ We guide you step by step  
+✔ Simple, fast setup  
+
+This section must be visually clean and easy to scan.
+
+---
+
+3) BOOKING / AUTOMATION LANGUAGE (CRITICAL FIX)
+
+Review all mentions of booking and automation.
+
+If any section says:
+“Clients book automatically” or implies full automation,
+
+Replace with more accurate wording:
+
+→ “Clients can request bookings anytime, 24/7”
+
+Keep it attractive but realistic to avoid overpromising.
+
+---
+
+4) PRICING SECTION (HIGH PRIORITY)
+
+Update pricing values:
+
+- Starter App: change from $299 → $259  
+- Business App: change from $699 → $499  
+
+DO NOT change anything else about pricing structure.
+
+---
+
+5) VALUE ANCHOR (ADD ABOVE PRICING)
+
+Insert a short section or line above pricing:
+
+“Instead of paying monthly subscription fees forever, own your app with a one-time payment.”
+
+This should be clearly visible and improve perceived value.
+
+---
+
+6) MICRO-CONVERSION SECTION (ADD BEFORE FINAL CTA)
+
+Add a short decision reinforcement block:
+
+Title:
+“This Is Perfect If You Want To:”
+
+Bullets:
+- Stop missing clients  
+- Look more professional  
+- Grow your business  
+
+Keep it simple, clean, and visually consistent.
+
+---
+
+7) CTA IMPROVEMENTS (GLOBAL)
+
+Review all buttons across the page.
+
+Ensure CTA buttons use strong action language:
+- Get My App Started
+- Start My App Now
+- Claim Your Spot
+- Get My App Today
+
+Only update text — DO NOT break button functionality.
+
+---
+
+8) FINAL CTA SECTION (POLISH)
+
+Ensure final section is strong and clean:
+
+Headline:
+“Ready to Get More Clients?”
+
+Body:
+“Stop relying only on social media. Own your platform. Grow your business.”
+
+Button:
+“Get My App Today”
+
+---
+
+DESIGN POLISH (LIGHT, NOT HEAVY):
+
+Improve:
+- spacing between sections
+- alignment
+- readability
+- button prominence
+- visual hierarchy
+- consistency in card sizes and paddings
+
+DO NOT redesign the entire site — only refine.
+
+---
+
+MOBILE OPTIMIZATION CHECK:
+
+Verify:
+- Headlines wrap correctly
+- Buttons stack properly
+- No overflow issues
+- Spacing is clean
+- Images scale correctly
+
+---
+
+FULL QA / DEBUG CHECK (MANDATORY):
+
+Before finishing, verify:
+
+✔ All buttons work  
+✔ Contact form works  
+✔ WhatsApp integration works  
+✔ Navigation links work  
+✔ No broken sections  
+✔ No layout shifts or overlap  
+✔ No console errors  
+✔ No missing assets  
+✔ No broken responsiveness  
+✔ Pricing displays correctly ($259 / $499)  
+✔ Language toggle (EN/ES) still works  
+✔ Site loads correctly  
+
+DO NOT deploy changes that break anything.
+
+---
+
+FINAL TASK:
+
+After implementing all improvements, provide a concise report including:
+
+1. What was improved (conversion + UX)
+2. Confirmation that all functionality is preserved
+3. Any potential risks or limitations detected
+4. Confirmation that the site is ready for publishing
+
+---
+
+IMPORTANT:
+
+Prioritize conversion, clarity, trust, and simplicity.
+
+Do not overdesign.
+Do not overcomplicate.
+
+The goal is a clean, high-converting, professional site ready to generate sales immediately.

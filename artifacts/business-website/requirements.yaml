@@ -1,0 +1,13 @@
+packages:
+  "framer-motion": "For scroll-triggered animations and smooth entry effects"
+  "react-hook-form": "For handling the contact form state"
+  "@hookform/resolvers": "For integrating zod validation with react-hook-form"
+  "zod": "For schema validation of the contact form"
+
+images:
+  - path: "artifacts/business-website/public/images/hero-app-mockup.png"
+    description: "A dark, sleek, abstract 3D illustration of a modern smartphone showing a glowing electric blue dashboard app interface, floating against a very dark studio background with subtle electric blue lighting accents. High end tech startup aesthetic."
+    aspect_ratio: "1:1"
+
+notes:
+  - "The site is purely frontend. The contact form will simulate a successful submission using react-hook-form and shadcn toast."

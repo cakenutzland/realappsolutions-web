@@ -1,0 +1,75 @@
+Replace ALL demo/mockup images currently used in the app showcase section with the real screenshots provided.
+
+Use ONLY the real images from the barber app (Richard Too Cool Master Barber). Do not use stock images, placeholders, or generic mockups.
+
+SECTION STRUCTURE:
+
+1. Create a premium section titled:
+   "See The App In Action"
+
+2. Add a strong trust-building subtitle above the images:
+   "Real app. Real business. Real results."
+   or
+   "This is a real app built for a real client"
+
+3. Organize the screenshots in a logical user-flow order:
+
+   - Home Dashboard (revenue & next appointment)
+   - Schedule view (appointments timeline)
+   - Booking modal (appointment form)
+   - Clients list (Client DB)
+   - Client detail view (profile popup)
+   - Services screen (pricing & menu)
+   - Reports / analytics screen
+   - Branding / splash screen (logo)
+
+4. LAYOUT RULES:
+
+   - Clean, modern, premium look
+   - 2–3 images per row on desktop
+   - Swipeable carousel on mobile
+   - Maintain consistent spacing and alignment
+   - Optional: subtle phone frame (minimal, not heavy)
+   - Add smooth hover effect (scale or shadow)
+
+5. ADD SHORT CAPTIONS under each image:
+
+   Examples:
+   - "Real-time revenue dashboard"
+   - "24/7 appointment booking system"
+   - "Client management system"
+   - "Service & pricing control"
+   - "Performance tracking & reports"
+
+6. VISUAL STYLE:
+
+   - Dark background (match current theme)
+   - Gold accents (premium barber branding)
+   - Clean typography
+   - High-end SaaS look (NOT template-looking)
+
+7. IMAGE HANDLING:
+
+   - Use images exactly as provided
+   - Do NOT stretch or distort
+   - Keep mobile vertical ratio
+   - Compress for fast loading without losing quality
+
+8. ADD STRONG CTA BELOW THE SECTION:
+
+   "Get your own app like this"
+   "Turn your business into an app today"
+   "Start getting more clients automatically"
+
+9. RESPONSIVENESS (VERY IMPORTANT):
+
+   - Mobile-first design (priority)
+   - Perfect display on phone
+   - Then adapt to tablet and desktop
+
+10. CRITICAL:
+
+This section must feel like a REAL working product, not a concept.
+
+It should increase trust, perceived value, and make visitors think:
+"I want this exact app for my business."

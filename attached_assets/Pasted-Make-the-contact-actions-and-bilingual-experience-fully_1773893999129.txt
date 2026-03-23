@@ -1,0 +1,183 @@
+Make the contact actions and bilingual experience fully functional and complete across the entire website.
+
+IMPORTANT:
+Do not redesign the site.
+Do not change the visual style, layout, spacing, colors, or branding.
+Only fix functionality, real contact data, and complete translation coverage.
+
+==================================================
+1) REAL CONTACT INFO
+==================================================
+
+Use this real phone number everywhere phone or WhatsApp contact should work:
+[PUT YOUR FULL PHONE NUMBER WITH COUNTRY CODE, NO SPACES OR SYMBOLS]
+Example format: 12395551234
+
+Use this real email everywhere email contact should work:
+[PUT YOUR REAL EMAIL HERE]
+
+==================================================
+2) WHATSAPP BUTTON FUNCTIONALITY
+==================================================
+
+Make the WhatsApp button fully functional.
+
+- Update the "Chat with us on WhatsApp" button to open WhatsApp using:
+  https://wa.me/[YOURNUMBER]?text=Hi%20I’m%20interested%20in%20getting%20an%20app%20for%20my%20business
+
+Requirements:
+- It must work correctly on desktop and mobile
+- It must open WhatsApp chat with the real number
+- It must use the prefilled message above
+- Keep the current button design unchanged
+
+Also:
+- If there are any other WhatsApp icons, floating buttons, or WhatsApp contact links anywhere else on the site, update all of them to the same real number and same behavior
+
+==================================================
+3) PHONE CALL LINKS
+==================================================
+
+If there are any phone number buttons, call buttons, tap-to-call links, or phone contact links anywhere on the site:
+
+- Make them use:
+  tel:[YOURNUMBER]
+
+Requirements:
+- They must work correctly on mobile
+- Keep design unchanged
+- Make sure there are no broken phone links anywhere
+
+==================================================
+4) EMAIL LINKS
+==================================================
+
+If there are any email buttons or email contact links anywhere on the site:
+
+- Make them use:
+  mailto:[YOUR REAL EMAIL]
+
+Requirements:
+- Keep design unchanged
+- Make sure every visible email contact opens the user’s email app correctly
+
+==================================================
+5) CONTACT FORM ("SEND MESSAGE") FUNCTIONALITY
+==================================================
+
+Make the contact form fully functional.
+
+Current fields:
+- Your Name
+- Business Type
+- Phone Number
+- Tell us about your business
+
+Requirements:
+- The "Send Message" button must actually submit the form successfully
+- Validate required fields before submission
+- Show clear validation messages if fields are missing
+- Show a clear success message after submission
+- Prevent broken or fake submit behavior
+
+Preferred implementation:
+- Send form submissions directly to this email:
+  [PUT YOUR REAL EMAIL HERE]
+
+If direct email submission is not ideal in the current stack, use a reliable working solution already compatible with the project, but it must actually function.
+
+Also:
+- Keep all form styling exactly as it is
+- Do not break layout
+- Make sure form works on both desktop and mobile
+
+==================================================
+6) COMPLETE SPANISH TRANSLATION
+==================================================
+
+Review and complete the full Spanish translation of the site.
+
+Requirements:
+- Translate every visible section fully into Spanish
+- Do not leave mixed English/Spanish text
+- Make the Spanish natural, professional, and clear
+- Keep meaning aligned with the English version
+- Do not overpromise features in either language
+- Keep all pricing, structure, and legal meaning consistent
+
+Translate ALL pages and ALL visible UI, including:
+- Navbar
+- Hero
+- Problem section
+- Solution section
+- Demo section
+- Pricing section
+- Final CTA section
+- Contact section
+- Footer
+- Buttons
+- Labels
+- Validation messages
+- Success/error messages
+- Any small helper text or subtitles
+
+==================================================
+7) TRANSLATE LEGAL PAGES TOO
+==================================================
+
+Complete and verify Spanish versions of:
+- Privacy Policy
+- Terms of Service
+
+Requirements:
+- The Spanish legal pages must be accessible from the Spanish version of the site
+- The English legal pages must remain accessible from the English version
+- Keep "Last Updated: March 2026" aligned in both languages
+- Make translation clear and professional
+- Do not leave any English text inside the Spanish legal pages unless legally necessary
+
+Suggested route structure:
+- English:
+  /privacy
+  /terms
+- Spanish:
+  /es/privacy
+  /es/terms
+
+==================================================
+8) LANGUAGE TOGGLE MUST WORK CORRECTLY
+==================================================
+
+Fix and verify the EN / ES language toggle so it works correctly across the entire site.
+
+Requirements:
+- EN should go to the full English version
+- ES should go to the full Spanish version
+- Switching language should preserve the correct page context when possible
+  Examples:
+  /privacy <-> /es/privacy
+  /terms <-> /es/terms
+- The active language state should display correctly
+- No broken routes
+- No partial translations
+- No links pointing to the wrong language version
+
+==================================================
+9) FINAL QA CHECK
+==================================================
+
+Before finishing, verify all of the following:
+
+- WhatsApp button works
+- Any call buttons/phone links work
+- Email links work
+- Contact form submits successfully
+- Spanish translation is complete
+- Privacy Policy works in both English and Spanish
+- Terms of Service works in both English and Spanish
+- EN / ES toggle works correctly on all pages
+- No broken links
+- No mixed-language sections
+- No visual layout changes or regressions
+
+At the end, give a short summary of exactly what was fixed and which routes/links were updated.

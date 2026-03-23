@@ -1,0 +1,58 @@
+Update the hero and problem sections to better match a realistic MVP app offer for local businesses.
+
+IMPORTANT:
+Do not imply full automation, advanced scheduling logic, automatic confirmations, or built-in payment processing unless those features already exist.
+The site should clearly position the product as a professional business app / web app that helps clients send appointment or order requests and helps the owner stay organized.
+
+Make these copy changes:
+
+1) HERO SECTION
+
+Replace the current main headline:
+"Turn Your Business Into an App That Books Clients and Organizes Your Business — Automatically"
+
+With:
+"Launch a Professional Business App That Helps Clients Send Requests and Keeps Everything Organized"
+
+Replace the current subheadline with:
+"Let clients view your services, send appointment or order requests, and contact you from their phone — while you keep everything organized in one place."
+
+Replace the current 3 bullet points with:
+- "Clients can send appointment or order requests without calling"
+- "Share your preferred payment methods like Zelle, Cash App, Venmo, card link, or in person"
+- "Keep customer requests and business details organized in one place"
+
+2) PROBLEM SECTION
+
+Replace the section title:
+"You're Losing Customers Right Now"
+
+With:
+"You're Losing Customers to Slow, Outdated Systems"
+
+Replace the paragraph under it with:
+"When customers have to call, wait for replies, or deal with confusing booking processes, many simply move on. Small businesses need a faster, more professional way to handle requests."
+
+Update the 3 problem cards with these new titles and descriptions:
+
+Card 1 Title:
+"Hard to Request Appointments"
+Card 1 Description:
+"Customers often reach out when you're busy. If there’s no simple way to send a request, many give up or contact someone else."
+
+Card 2 Title:
+"No System, No Organization"
+Card 2 Description:
+"Handling appointments, orders, and customer details across calls, notes, and messages quickly becomes messy and hard to manage."
+
+Card 3 Title:
+"Your Business Looks Behind"
+Card 3 Description:
+"A modern business should feel easy to reach and easy to trust. If your customer experience feels outdated, people notice."
+
+3) STYLE / UX NOTES
+- Keep the same premium visual style, spacing, and color palette.
+- Preserve responsiveness.
+- Do not break layout or button placement.
+- Keep the wording concise and high-converting.
+- Make sure the new copy fits cleanly on desktop and mobile without awkward line breaks.

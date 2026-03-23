@@ -1,0 +1,163 @@
+Make the contact system and bilingual functionality fully operational across the entire website.
+
+IMPORTANT:
+Do not change layout, design, spacing, colors, or branding.
+Only fix functionality, real contact data, and translations.
+
+==================================================
+1) REAL CONTACT INFO
+==================================================
+
+Use this phone number everywhere:
++1 (239) 327-8471
+
+Use this email everywhere:
+cakenutzland@gmail.com
+
+Phone number format for links (NO spaces or symbols):
+12393278471
+
+==================================================
+2) WHATSAPP BUTTON FUNCTIONALITY
+==================================================
+
+Update the "Chat with us on WhatsApp" button to:
+
+https://wa.me/12393278471?text=Hi%20I’m%20interested%20in%20getting%20an%20app%20for%20my%20business
+
+Requirements:
+- Must open WhatsApp correctly on desktop and mobile
+- Must start chat with this number: 12393278471
+- Must include the prefilled message
+- Do not change design
+
+Also:
+- Update ANY other WhatsApp buttons or icons on the site to use the same link
+
+==================================================
+3) PHONE CALL LINKS
+==================================================
+
+If there are any phone/call buttons or links:
+
+Use:
+tel:12393278471
+
+Requirements:
+- Must work on mobile tap-to-call
+- Keep design unchanged
+- No broken links
+
+==================================================
+4) EMAIL LINKS
+==================================================
+
+Replace ALL email instances with:
+
+cakenutzland@gmail.com
+
+Make sure all email links use:
+mailto:cakenutzland@gmail.com
+
+Requirements:
+- Clicking email opens user's email app
+- Update everywhere (contact section, footer, etc.)
+
+==================================================
+5) CONTACT FORM (SEND MESSAGE)
+==================================================
+
+Make the contact form fully functional.
+
+Fields:
+- Your Name
+- Business Type
+- Phone Number
+- Tell us about your business
+
+Requirements:
+- Form must actually submit (no fake button)
+- Validate required fields
+- Show clear error messages if missing fields
+- Show success confirmation after submit
+
+Send submissions to:
+cakenutzland@gmail.com
+
+Do NOT change design.
+
+==================================================
+6) COMPLETE SPANISH TRANSLATION
+==================================================
+
+Fully translate the entire site into Spanish.
+
+Requirements:
+- No mixed English/Spanish text
+- Natural, professional Spanish
+- Keep meaning aligned with English
+- Do not overpromise features
+
+Translate ALL:
+- Navbar
+- Hero
+- Sections (Problem, Solution, Demo, Pricing, CTA)
+- Contact section
+- Footer
+- Buttons
+- Messages (errors, success)
+
+==================================================
+7) TRANSLATE LEGAL PAGES
+==================================================
+
+Ensure full Spanish versions of:
+
+- Privacy Policy
+- Terms of Service
+
+Requirements:
+- English pages:
+  /privacy
+  /terms
+
+- Spanish pages:
+  /es/privacy
+  /es/terms
+
+- Keep "Last Updated: March 2026"
+- No mixed language content
+
+==================================================
+8) LANGUAGE TOGGLE FIX
+==================================================
+
+Fix EN / ES toggle:
+
+Requirements:
+- EN = English version
+- ES = Spanish version
+- Must switch correctly on all pages
+- Maintain correct routes:
+  /privacy ↔ /es/privacy
+  /terms ↔ /es/terms
+- No broken navigation
+- No partial translations
+
+==================================================
+9) FINAL CHECK
+==================================================
+
+Verify:
+
+- WhatsApp works
+- Phone links work
+- Email links work
+- Form submits correctly
+- Spanish translation complete
+- Privacy & Terms work in both languages
+- Language toggle works everywhere
+- No broken links
+- No design changes
+
+At the end, provide a short summary of what was fixed.
