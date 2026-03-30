@@ -2,20 +2,305 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Real App Solutions</title>
-    <meta name="description" content="Real App Solutions builds custom mobile apps, professional websites, calculators, and SaaS tools for local businesses. One client at a time — full dedication to your project." />
-    <meta property="og:title" content="Real App Solutions" />
-    <meta property="og:description" content="Custom digital products for local businesses — mobile apps, websites, tools, and SaaS. Built with full dedication." />
-    <meta property="og:type" content="website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barber Master Suite — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Barber Master Suite by Real App Solutions." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-BLeqo5GP.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-uFk-I97E.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --bg: #09090b;
+        --card: #111113;
+        --border: rgba(255,255,255,0.08);
+        --text: #fafafa;
+        --muted: #71717a;
+        --primary: #8b5cf6;
+        --divider: rgba(255,255,255,0.06);
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--primary); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* Nav */
+      .nav {
+        position: sticky; top: 0; z-index: 50;
+        background: rgba(9,9,11,0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 0 1.5rem;
+        height: 64px;
+        display: flex; align-items: center; justify-content: space-between;
+      }
+      .nav-logo {
+        display: flex; align-items: center; gap: 0.5rem;
+        font-weight: 700; font-size: 1.1rem; color: var(--text);
+        text-decoration: none;
+      }
+      .nav-back {
+        font-size: 0.85rem; color: var(--muted);
+        display: flex; align-items: center; gap: 0.3rem;
+      }
+      .nav-back:hover { color: var(--text); text-decoration: none; }
+
+      /* Main */
+      main {
+        max-width: 740px;
+        margin: 0 auto;
+        padding: 3.5rem 1.5rem 5rem;
+      }
+
+      /* Header */
+      .page-header { margin-bottom: 3rem; }
+      .app-badge {
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+        text-transform: uppercase; color: var(--primary);
+        background: rgba(139,92,246,0.1);
+        border: 1px solid rgba(139,92,246,0.25);
+        border-radius: 999px;
+        padding: 0.3rem 0.8rem;
+        margin-bottom: 1.2rem;
+      }
+      h1 {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+      }
+      .meta {
+        font-size: 0.85rem;
+        color: var(--muted);
+        display: flex; flex-wrap: wrap; gap: 1rem;
+      }
+      .meta span { display: flex; align-items: center; gap: 0.35rem; }
+
+      /* Sections */
+      .sections { display: flex; flex-direction: column; gap: 0; }
+      .section {
+        border-top: 1px solid var(--divider);
+        padding: 2rem 0;
+      }
+      .section:last-child { padding-bottom: 0; }
+      h2 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.6rem;
+      }
+      p {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.75;
+        margin-bottom: 0.5rem;
+      }
+      p:last-child { margin-bottom: 0; }
+
+      /* Divider between languages */
+      .lang-divider {
+        margin: 3.5rem 0;
+        display: flex; align-items: center; gap: 1rem;
+      }
+      .lang-divider::before, .lang-divider::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+      .lang-divider span {
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 2rem 1.5rem;
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      footer a { color: var(--muted); }
+      footer a:hover { color: var(--text); }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+
+    <nav class="nav">
+      <a href="/" class="nav-logo">Real App Solutions</a>
+      <a href="/" class="nav-back">← Back to Home</a>
+    </nav>
+
+    <main>
+
+      <!-- ══════════════ ENGLISH ══════════════ -->
+      <div class="page-header">
+        <div class="app-badge">Privacy Policy</div>
+        <h1>Barber Master Suite</h1>
+        <div class="meta">
+          <span>Developer: NutzLabs / Real App Solutions</span>
+          <span>Last updated: March 2026</span>
+          <span><a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a></span>
+        </div>
+      </div>
+
+      <div class="sections">
+
+        <div class="section">
+          <h2>Introduction</h2>
+          <p>Barber Master Suite is a barbershop management app for iOS and Android that helps barbers manage appointments, clients, services, and business reports.</p>
+        </div>
+
+        <div class="section">
+          <h2>Data We Collect</h2>
+          <p>The app collects: shop name, owner name, city, phone, and email (used for cloud backup authentication). A backup password is stored as an encrypted hash — we never store plain-text passwords.</p>
+          <p>Appointment data, client names, services, and business reports are stored locally on your device.</p>
+        </div>
+
+        <div class="section">
+          <h2>How We Use Data</h2>
+          <p>Data is used solely to provide app functionality. Your email and encrypted password are used only to authenticate cloud backup and restore operations. We do not use your data for marketing or share it with third parties.</p>
+        </div>
+
+        <div class="section">
+          <h2>Cloud Backup</h2>
+          <p>PRO users may optionally enable cloud backup. This sends your barbershop data to our secure servers (Supabase), protected by your email and encrypted password. You control when backups occur. You can delete your data at any time from the app settings.</p>
+        </div>
+
+        <div class="section">
+          <h2>Google Play Billing</h2>
+          <p>Subscriptions ($9.99/month) are processed exclusively by Google Play. We do not store payment card information.</p>
+        </div>
+
+        <div class="section">
+          <h2>Third-Party Services</h2>
+          <p>We use Supabase for optional cloud storage (PRO only) and Google Play for subscription billing. No data is shared with advertisers or analytics providers.</p>
+        </div>
+
+        <div class="section">
+          <h2>Data Retention</h2>
+          <p>Your data remains on your device indefinitely. Cloud backup data is retained until you delete it from the app or request deletion by emailing <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+        </div>
+
+        <div class="section">
+          <h2>Children's Privacy</h2>
+          <p>This app is intended for adult business owners and is not directed at children under 13.</p>
+        </div>
+
+        <div class="section">
+          <h2>Your Rights</h2>
+          <p>You may request deletion of your cloud data at any time by emailing <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+        </div>
+
+        <div class="section">
+          <h2>Changes</h2>
+          <p>We will update this page if the policy changes. The "Last updated" date will reflect any revisions.</p>
+        </div>
+
+        <div class="section">
+          <h2>Contact</h2>
+          <p>Real App Solutions<br />
+          <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a><br />
+          <a href="https://www.realappsolutions.com">https://www.realappsolutions.com</a></p>
+        </div>
+
+      </div>
+
+      <!-- ══════════════ DIVIDER ══════════════ -->
+      <div class="lang-divider"><span>Versión en Español</span></div>
+
+      <!-- ══════════════ SPANISH ══════════════ -->
+      <div class="page-header">
+        <div class="app-badge">Política de Privacidad</div>
+        <h1>Barber Master Suite</h1>
+        <div class="meta">
+          <span>Desarrollador: NutzLabs / Real App Solutions</span>
+          <span>Última actualización: Marzo 2026</span>
+          <span><a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a></span>
+        </div>
+      </div>
+
+      <div class="sections">
+
+        <div class="section">
+          <h2>Introducción</h2>
+          <p>Barber Master Suite es una aplicación de gestión de barberías para iOS y Android que ayuda a los barberos a administrar citas, clientes, servicios e informes de negocio.</p>
+        </div>
+
+        <div class="section">
+          <h2>Datos que recopilamos</h2>
+          <p>La aplicación recopila: nombre del negocio, nombre del propietario, ciudad, teléfono y correo electrónico (utilizado para la autenticación de copias de seguridad en la nube). La contraseña de respaldo se almacena como un hash cifrado — nunca almacenamos contraseñas en texto plano.</p>
+          <p>Los datos de citas, nombres de clientes, servicios e informes de negocio se almacenan localmente en su dispositivo.</p>
+        </div>
+
+        <div class="section">
+          <h2>Cómo usamos sus datos</h2>
+          <p>Los datos se utilizan únicamente para proveer la funcionalidad de la aplicación. Su correo electrónico y contraseña cifrada se usan exclusivamente para autenticar las operaciones de copia de seguridad y restauración en la nube. No utilizamos sus datos con fines de marketing ni los compartimos con terceros.</p>
+        </div>
+
+        <div class="section">
+          <h2>Copia de seguridad en la nube</h2>
+          <p>Los usuarios PRO pueden habilitar opcionalmente la copia de seguridad en la nube. Esto envía los datos de su barbería a nuestros servidores seguros (Supabase), protegidos por su correo electrónico y contraseña cifrada. Usted controla cuándo se realizan las copias de seguridad. Puede eliminar sus datos en cualquier momento desde la configuración de la aplicación.</p>
+        </div>
+
+        <div class="section">
+          <h2>Facturación de Google Play</h2>
+          <p>Las suscripciones ($9.99/mes) son procesadas exclusivamente por Google Play. No almacenamos información de tarjetas de pago.</p>
+        </div>
+
+        <div class="section">
+          <h2>Servicios de terceros</h2>
+          <p>Utilizamos Supabase para el almacenamiento en la nube opcional (solo versión PRO) y Google Play para la facturación de suscripciones. Ningún dato se comparte con anunciantes ni proveedores de analítica.</p>
+        </div>
+
+        <div class="section">
+          <h2>Retención de datos</h2>
+          <p>Sus datos permanecen en su dispositivo de forma indefinida. Los datos de la copia de seguridad en la nube se conservan hasta que usted los elimine desde la aplicación o solicite su eliminación enviando un correo a <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+        </div>
+
+        <div class="section">
+          <h2>Privacidad de menores</h2>
+          <p>Esta aplicación está dirigida a propietarios de negocios adultos y no está destinada a menores de 13 años.</p>
+        </div>
+
+        <div class="section">
+          <h2>Sus derechos</h2>
+          <p>Usted puede solicitar la eliminación de sus datos en la nube en cualquier momento enviando un correo electrónico a <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+        </div>
+
+        <div class="section">
+          <h2>Cambios en esta política</h2>
+          <p>Actualizaremos esta página si la política cambia. La fecha de "Última actualización" reflejará cualquier revisión.</p>
+        </div>
+
+        <div class="section">
+          <h2>Contacto</h2>
+          <p>Real App Solutions<br />
+          <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a><br />
+          <a href="https://www.realappsolutions.com">https://www.realappsolutions.com</a></p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Real App Solutions · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a></p>
+    </footer>
+
   </body>
 </html>
