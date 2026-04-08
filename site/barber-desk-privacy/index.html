@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barber Desk — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Barber Desk by Real App Solutions." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --bg: #09090b;
+        --card: #111113;
+        --border: rgba(255,255,255,0.08);
+        --text: #fafafa;
+        --muted: #71717a;
+        --primary: #D4AF37;
+        --divider: rgba(255,255,255,0.06);
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--primary); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .nav {
+        position: sticky; top: 0; z-index: 50;
+        background: rgba(9,9,11,0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 0 1.5rem;
+        height: 64px;
+        display: flex; align-items: center; justify-content: space-between;
+      }
+      .nav-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+      .nav-back { font-size: 0.85rem; color: var(--muted); display: flex; align-items: center; gap: 0.3rem; }
+      .nav-back:hover { color: var(--text); text-decoration: none; }
+      main { max-width: 740px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+      .page-header { margin-bottom: 3rem; }
+      .app-badge {
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+        text-transform: uppercase; color: var(--primary);
+        background: rgba(212,175,55,0.1);
+        border: 1px solid rgba(212,175,55,0.25);
+        border-radius: 999px;
+        padding: 0.3rem 0.8rem;
+        margin-bottom: 1.2rem;
+      }
+      h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.2; margin-bottom: 0.75rem; }
+      .meta { font-size: 0.85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 1rem; }
+      .meta span { display: flex; align-items: center; gap: 0.35rem; }
+      .sections { display: flex; flex-direction: column; gap: 0; }
+      .section { border-top: 1px solid var(--divider); padding: 2rem 0; }
+      .section:last-child { padding-bottom: 0; }
+      h2 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 0.6rem; }
+      p { color: var(--muted); font-size: 0.95rem; line-height: 1.75; margin-bottom: 0.5rem; }
+      p:last-child { margin-bottom: 0; }
+      ul { color: var(--muted); font-size: 0.95rem; line-height: 1.75; padding-left: 1.4rem; margin-bottom: 0.5rem; }
+      li { margin-bottom: 0.25rem; }
+      .lang-divider { margin: 3.5rem 0; display: flex; align-items: center; gap: 1rem; }
+      .lang-divider::before, .lang-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+      .lang-divider span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+      footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; font-size: 0.8rem; color: var(--muted); }
+      footer a { color: var(--muted); }
+      footer a:hover { color: var(--text); }
+    </style>
+  </head>
+  <body>
+
+    <nav class="nav">
+      <a href="/" class="nav-logo">Real App Solutions</a>
+      <a href="/" class="nav-back">← Back to Home</a>
+    </nav>
+
+    <main>
+
+      <!-- ══════════════ ENGLISH ══════════════ -->
+      <div class="page-header">
+        <div class="app-badge">Privacy Policy</div>
+        <h1>Barber Desk</h1>
+        <div class="meta">
+          <span>Developer: NutzLabs / Real App Solutions</span>
+          <span>Last updated: April 2026</span>
+          <span><a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a></span>
+        </div>
+      </div>
+
+      <div class="sections">
+
+        <div class="section">
+          <h2>Introduction</h2>
+          <p>Barber Desk is a barbershop management platform for Android that allows barbershop owners to manage their business, staff, clients, appointments, and services. Barbers can access a limited view of their own schedule using a secure PIN. Clients can book appointments through a public booking flow.</p>
+          <p>This Privacy Policy describes what data we collect, how we use it, and your rights over it.</p>
+        </div>
+
+        <div class="section">
+          <h2>Who Uses the App</h2>
+          <p>Barber Desk serves three types of users:</p>
+          <ul>
+            <li><strong>Owners:</strong> Register with email and password. Manage the full barbershop.</li>
+            <li><strong>Barbers:</strong> Identified by a 6-digit PIN. Access only their own schedule within the owner's account.</li>
+            <li><strong>Clients:</strong> Book appointments without creating an account. Name, phone, and optionally email are collected per booking.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Data We Collect</h2>
+          <p><strong>Owner account data:</strong> email address and password (stored as a secure hash via Supabase Auth). Optionally: owner name, business name, city, phone number.</p>
+          <p><strong>Barber data:</strong> name, specialty, phone, email, and a 6-digit PIN. This data is entered by the owner and stored in the cloud.</p>
+          <p><strong>Client data:</strong> name, phone number, and optionally email. Visit history and service records. This data is entered by the owner or collected during the public booking flow.</p>
+          <p><strong>Appointment data:</strong> date, time, service, assigned barber, status, notes, payment method, and optional tip amount.</p>
+          <p><strong>Business data:</strong> service names and prices, working hours, schedule settings, blocked times, and payment method preferences.</p>
+        </div>
+
+        <div class="section">
+          <h2>How We Use Data</h2>
+          <p>All data is used exclusively to provide the app's functionality:</p>
+          <ul>
+            <li>Owner authentication and session management.</li>
+            <li>Displaying and managing appointments, clients, and services.</li>
+            <li>Allowing barbers to view their own schedule via PIN.</li>
+            <li>Enabling clients to book appointments through the public booking flow.</li>
+            <li>Generating business reports for PRO subscribers.</li>
+          </ul>
+          <p>We do not use your data for advertising, profiling, or any purpose beyond operating the app.</p>
+        </div>
+
+        <div class="section">
+          <h2>Cloud Storage</h2>
+          <p>All data is stored in the cloud via Supabase (AWS, us-east-1). Cloud storage is active for all users — both Free and PRO — as Barber Desk is a cloud-first platform. Data is protected by Row Level Security (RLS) policies: each barbershop owner can only access their own data. Barber PIN access is also scoped to the owner's account.</p>
+        </div>
+
+        <div class="section">
+          <h2>Barber PIN Access</h2>
+          <p>Barbers do not create their own accounts. They access the app using a 6-digit PIN created by the owner. PINs are stored in the cloud and grant access only to the barber's own schedule within the owner's barbershop. The owner is responsible for managing PIN security and revoking access when needed.</p>
+        </div>
+
+        <div class="section">
+          <h2>Client Booking Data</h2>
+          <p>When a client books an appointment through the public booking flow, we collect their name, phone number, and optionally their email address. This information is stored in the barbershop owner's account and is visible only to the owner and their staff. Clients do not create an account and their data is retained as part of the barbershop's client history until the owner deletes it.</p>
+        </div>
+
+        <div class="section">
+          <h2>Google Play Billing</h2>
+          <p>PRO subscriptions ($14.99/month or $143.99/year) are processed exclusively by Google Play Billing. We do not store, transmit, or have access to any payment card information. Billing is governed by Google Play's terms and policies.</p>
+        </div>
+
+        <div class="section">
+          <h2>Third-Party Services</h2>
+          <ul>
+            <li><strong>Supabase:</strong> Cloud database and authentication (supabase.com). Data is stored in AWS us-east-1.</li>
+            <li><strong>Google Play:</strong> Subscription billing for PRO plan.</li>
+          </ul>
+          <p>No data is shared with advertisers, analytics providers, or any other third parties.</p>
+        </div>
+
+        <div class="section">
+          <h2>Data Retention</h2>
+          <p>Your data is retained in the cloud as long as your account is active. You can delete specific records (clients, appointments, barbers) from within the app at any time. To permanently delete your entire account and all associated data, contact us at <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>. We will process deletion requests within 30 days.</p>
+        </div>
+
+        <div class="section">
+          <h2>Data Security</h2>
+          <p>All data in transit is encrypted via HTTPS/TLS. Passwords are hashed using Supabase Auth (bcrypt). Row Level Security (RLS) ensures each account can only access its own data. We do not store plain-text passwords or payment information.</p>
+        </div>
+
+        <div class="section">
+          <h2>Children's Privacy</h2>
+          <p>Barber Desk is intended for adult business owners and professionals. It is not directed at children under 13. We do not knowingly collect data from children.</p>
+        </div>
+
+        <div class="section">
+          <h2>Your Rights</h2>
+          <p>You have the right to access, correct, export, or delete your data at any time. To exercise these rights, contact us at <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+        </div>
+
+        <div class="section">
+          <h2>Changes to This Policy</h2>
+          <p>We will update this page if the policy changes materially. The "Last updated" date will reflect any revisions. Continued use of the app after changes constitutes acceptance.</p>
+        </div>
+
+        <div class="section">
+          <h2>Contact</h2>
+          <p>Real App Solutions / NutzLabs<br />
+          <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a><br />
+          <a href="https://www.realappsolutions.com">https://www.realappsolutions.com</a></p>
+        </div>
+
+      </div>
+
+      <!-- ══════════════ DIVIDER ══════════════ -->
+      <div class="lang-divider"><span>Versión en Español</span></div>
+
+      <!-- ══════════════ SPANISH ══════════════ -->
+      <div class="page-header">
+        <div class="app-badge">Política de Privacidad</div>
+        <h1>Barber Desk</h1>
+        <div class="meta">
+          <span>Desarrollador: NutzLabs / Real App Solutions</span>
+          <span>Última actualización: Abril 2026</span>
+          <span><a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a></span>
+        </div>
+      </div>
+
+      <div class="sections">
+
+        <div class="section">
+          <h2>Introducción</h2>
+          <p>Barber Desk es una plataforma de gestión de barberías para Android que permite a los propietarios administrar su negocio, personal, clientes, citas y servicios. Los barberos pueden acceder a una vista limitada de su propia agenda mediante un PIN seguro. Los clientes pueden reservar citas a través de un flujo de reserva público.</p>
+        </div>
+
+        <div class="section">
+          <h2>Tipos de usuarios</h2>
+          <p>Barber Desk sirve a tres tipos de usuarios:</p>
+          <ul>
+            <li><strong>Propietarios:</strong> Se registran con email y contraseña. Gestionan toda la barbería.</li>
+            <li><strong>Barberos:</strong> Identificados por un PIN de 6 dígitos. Acceden únicamente a su propia agenda dentro de la cuenta del propietario.</li>
+            <li><strong>Clientes:</strong> Reservan citas sin crear cuenta. Se recopila nombre, teléfono y opcionalmente email por cada reserva.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Datos que recopilamos</h2>
+          <p><strong>Cuenta del propietario:</strong> dirección de email y contraseña (almacenada como hash seguro mediante Supabase Auth). Opcionalmente: nombre del propietario, nombre del negocio, ciudad, teléfono.</p>
+          <p><strong>Datos de barberos:</strong> nombre, especialidad, teléfono, email y PIN de 6 dígitos. El propietario ingresa estos datos y se almacenan en la nube.</p>
+          <p><strong>Datos de clientes:</strong> nombre, teléfono y opcionalmente email. Historial de visitas y registro de servicios.</p>
+          <p><strong>Datos de citas:</strong> fecha, hora, servicio, barbero asignado, estado, notas, método de pago y propina opcional.</p>
+          <p><strong>Datos del negocio:</strong> nombres y precios de servicios, horarios de trabajo, configuración de agenda, tiempos bloqueados y métodos de pago.</p>
+        </div>
+
+        <div class="section">
+          <h2>Cómo usamos los datos</h2>
+          <p>Todos los datos se utilizan exclusivamente para proveer la funcionalidad de la aplicación: autenticación del propietario, gestión de citas y clientes, acceso de barberos por PIN, reservas de clientes y generación de reportes PRO. No usamos sus datos con fines publicitarios ni los compartimos con terceros.</p>
+        </div>
+
+        <div class="section">
+          <h2>Almacenamiento en la nube</h2>
+          <p>Todos los datos se almacenan en la nube mediante Supabase (AWS, us-east-1). El almacenamiento en nube está activo para todos los usuarios (Gratis y PRO). Los datos están protegidos por políticas de Row Level Security (RLS): cada propietario solo puede acceder a los datos de su propia barbería.</p>
+        </div>
+
+        <div class="section">
+          <h2>Acceso de barberos por PIN</h2>
+          <p>Los barberos no crean su propia cuenta. Acceden con un PIN de 6 dígitos creado por el propietario, que otorga acceso únicamente a su propia agenda. El propietario es responsable de gestionar la seguridad del PIN y revocar el acceso cuando sea necesario.</p>
+        </div>
+
+        <div class="section">
+          <h2>Datos de reserva de clientes</h2>
+          <p>Cuando un cliente reserva una cita, recopilamos su nombre, teléfono y opcionalmente email. Esta información se almacena en la cuenta del propietario y es visible únicamente para el propietario y su personal. Los clientes no crean cuenta y sus datos se retienen como parte del historial de clientes hasta que el propietario los elimine.</p>
+        </div>
+
+        <div class="section">
+          <h2>Facturación de Google Play</h2>
+          <p>Las suscripciones PRO ($14.99/mes o $143.99/año) son procesadas exclusivamente por Google Play Billing. No almacenamos ni accedemos a ningún dato de tarjeta de pago.</p>
+        </div>
+
+        <div class="section">
+          <h2>Servicios de terceros</h2>
+          <ul>
+            <li><strong>Supabase:</strong> Base de datos en la nube y autenticación (supabase.com). Datos almacenados en AWS us-east-1.</li>
+            <li><strong>Google Play:</strong> Facturación de suscripciones PRO.</li>
+          </ul>
+          <p>No se comparten datos con anunciantes, proveedores de analítica ni ningún otro tercero.</p>
+        </div>
+
+        <div class="section">
+          <h2>Retención de datos</h2>
+          <p>Sus datos se conservan mientras su cuenta esté activa. Puede eliminar registros específicos desde la aplicación. Para eliminar completamente su cuenta y todos sus datos, contáctenos en <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>. Procesamos las solicitudes de eliminación en 30 días.</p>
+        </div>
+
+        <div class="section">
+          <h2>Seguridad</h2>
+          <p>Todos los datos en tránsito están cifrados mediante HTTPS/TLS. Las contraseñas se almacenan con hash bcrypt via Supabase Auth. Las políticas RLS garantizan que cada cuenta solo acceda a sus propios datos. No almacenamos contraseñas en texto plano ni información de pago.</p>
+        </div>
+
+        <div class="section">
+          <h2>Privacidad de menores</h2>
+          <p>Barber Desk está dirigido a propietarios de negocios y profesionales adultos. No está destinado a menores de 13 años y no recopilamos datos de menores de forma intencionada.</p>
+        </div>
+
+        <div class="section">
+          <h2>Sus derechos</h2>
+          <p>Tiene derecho a acceder, corregir, exportar o eliminar sus datos en cualquier momento. Para ejercer estos derechos, contáctenos en <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+        </div>
+
+        <div class="section">
+          <h2>Cambios en esta política</h2>
+          <p>Actualizaremos esta página si la política cambia de forma significativa. La fecha de "Última actualización" reflejará cualquier revisión. El uso continuado de la aplicación tras los cambios implica aceptación.</p>
+        </div>
+
+        <div class="section">
+          <h2>Contacto</h2>
+          <p>Real App Solutions / NutzLabs<br />
+          <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a><br />
+          <a href="https://www.realappsolutions.com">https://www.realappsolutions.com</a></p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Real App Solutions · <a href="/barber-desk-privacy">Privacy Policy</a> · <a href="/barber-desk-terms">Terms of Use</a></p>
+    </footer>
+
+  </body>
+</html>
