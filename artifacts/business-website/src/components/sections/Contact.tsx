@@ -84,7 +84,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="mailto:hola@realappsolutions.com"
+                href="mailto:realappsolutions@gmail.com"
                 className="flex items-center gap-4 bg-card border border-white/10 p-5 rounded-2xl hover:bg-white/5 transition-colors w-fit"
               >
                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center">
@@ -92,7 +92,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground font-medium">Email us</p>
-                  <p className="text-lg font-bold text-white">hola@realappsolutions.com</p>
+                  <p className="text-lg font-bold text-white">realappsolutions@gmail.com</p>
                 </div>
               </a>
             </div>
