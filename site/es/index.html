@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+<title>Real App Solutions — Apps a Medida para Negocios | Naples, FL</title>
+<meta name="description" content="Real App Solutions crea apps móviles, sitios web profesionales y herramientas digitales para negocios pequeños. Basados en el Suroeste de Florida.">
+<meta property="og:title" content="Real App Solutions — Apps Que Trabajan Tan Duro Como Tú">
+<meta property="og:description" content="Custom mobile apps, websites, and SaaS tools for barbershops, bakeries, tattoo studios, and local businesses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://realappsolutions.com">
+<meta property="og:image" content="/opengraph.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="canonical" href="https://realappsolutions.com">
+<link rel="alternate" hreflang="es" href="https://realappsolutions.com/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#08090d;--bg-card:#0f1117;--fg:#f1f1f3;
+--muted:#8b8fa3;--border:rgba(255,255,255,.07);
+--primary:#3b82f6;--primary-glow:rgba(59,130,246,.25);
+--accent-gold:#c9a84c;--accent-gold-glow:rgba(201,168,76,.15);
+--rose:#f43f5e;--amber:#f59e0b;--emerald:#10b981;--indigo:#6366f1;--violet:#8b5cf6;
+--radius:1rem;--font-body:'DM Sans',system-ui,sans-serif;--font-display:'Outfit',sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.15;font-weight:700}
+.text-gradient{background:linear-gradient(135deg,var(--primary),#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.text-gradient-gold{background:linear-gradient(135deg,var(--accent-gold),#e8d48b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section{padding:6rem 0;position:relative}
+.section-border{border-top:1px solid var(--border)}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:border-color .3s}
+.card:hover{border-color:rgba(59,130,246,.2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--font-display);font-weight:700;border:none;cursor:pointer;transition:all .25s;border-radius:9999px}
+.btn-primary{background:var(--primary);color:#fff;padding:.875rem 2rem;font-size:1rem;box-shadow:0 0 40px -10px var(--primary-glow)}
+.btn-primary:hover{background:#2563eb;transform:translateY(-2px);box-shadow:0 0 60px -10px var(--primary-glow)}
+.btn-outline{background:transparent;color:#fff;padding:.875rem 2rem;font-size:1rem;border:1px solid rgba(255,255,255,.1)}
+.btn-outline:hover{background:rgba(255,255,255,.05)}
+.pill{display:inline-flex;align-items:center;gap:.5rem;padding:.375rem .875rem;border-radius:9999px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.glow-orb{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
+.grid-2{display:grid;grid-template-columns:1fr;gap:1.5rem}
+.grid-3{display:grid;grid-template-columns:1fr;gap:1.5rem}
+.grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+@media(min-width:768px){.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1024px){.grid-2{gap:2.5rem}}
+
+/* Fade-in animation */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 0;transition:all .3s}
+.nav.scrolled{background:rgba(8,9,13,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:.625rem 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.5rem;font-family:var(--font-display);font-weight:700;font-size:1.125rem}
+.nav-links{display:none;gap:2rem;align-items:center;list-style:none}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{font-size:.8125rem;padding:.5rem 1.25rem}
+.nav-lang{display:flex;gap:.25rem}
+.nav-lang a{font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:.375rem;color:var(--muted);transition:all .2s}
+.nav-lang a:hover,.nav-lang a.active{color:#fff;background:rgba(255,255,255,.08)}
+.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;z-index:200}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .3s}
+.mobile-menu{position:fixed;inset:0;background:rgba(8,9,13,.98);z-index:150;display:none;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1.25rem;font-weight:600;color:#fff}
+@media(min-width:768px){.nav-links{display:flex}.hamburger{display:none}}
+
+/* WhatsApp FAB */
+.wa-fab{position:fixed;bottom:1.5rem;right:1.5rem;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;z-index:90;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s}
+.wa-fab:hover{transform:scale(1.1)}
+.wa-fab svg{width:28px;height:28px;fill:#fff}
+
+/* Screenshot gallery */
+.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+@media(min-width:768px){.screenshot-grid{grid-template-columns:repeat(4,1fr);gap:1.25rem}}
+.screenshot-card{text-align:center}
+.screenshot-card img{border-radius:1.25rem;border:1px solid rgba(255,255,255,.08);box-shadow:0 8px 32px rgba(0,0,0,.6);transition:all .3s}
+.screenshot-card:hover img{border-color:rgba(201,168,76,.3);box-shadow:0 12px 40px var(--accent-gold-glow);transform:scale(1.02)}
+.screenshot-card .caption{margin-top:.625rem;font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--accent-gold)}
+.screenshot-card .sub{font-size:.6875rem;color:rgba(255,255,255,.4);margin-top:.125rem;display:none}
+@media(min-width:640px){.screenshot-card .sub{display:block}}
+
+/* Pricing cards */
+.pricing-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media(min-width:640px){.pricing-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.pricing-grid{grid-template-columns:repeat(4,1fr)}}
+.pricing-card{background:var(--bg-card);border:1px solid var(--border);border-radius:1.5rem;padding:1.75rem;display:flex;flex-direction:column;position:relative}
+.pricing-card.popular{border-color:var(--primary);box-shadow:0 8px 40px rgba(59,130,246,.1)}
+@media(min-width:1024px){.pricing-card.popular{transform:translateY(-12px)}}
+.pricing-badge{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);padding:.25rem .75rem;border-radius:9999px;font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.pricing-badge.primary{background:var(--primary);color:#fff}
+.pricing-badge.outline{background:var(--bg-card);border:1px solid rgba(255,255,255,.15);color:var(--muted)}
+.price{font-family:var(--font-display);font-size:1.875rem;font-weight:800;color:#fff}
+.price-suffix{font-size:.75rem;color:var(--muted);font-weight:500}
+.feature-list{list-style:none;display:flex;flex-direction:column;gap:.625rem;flex-grow:1;margin:1rem 0}
+.feature-item{display:flex;align-items:flex-start;gap:.625rem;font-size:.8125rem;color:var(--muted)}
+.feature-dot{width:16px;height:16px;border-radius:50%;background:rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.feature-dot svg{width:10px;height:10px;stroke:var(--primary);stroke-width:2.5;fill:none}
+
+/* Apps section */
+.app-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;transition:border-color .3s}
+.app-card:hover{border-color:rgba(59,130,246,.2)}
+.app-tag{font-size:.6875rem;padding:.25rem .625rem;border-radius:9999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.6);font-weight:500}
+.status-live{color:#4ade80;font-size:.75rem;font-weight:600}
+.status-soon{color:var(--amber);font-size:.75rem;font-weight:600}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:3rem 0}
+footer .inner{display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center}
+@media(min-width:768px){footer .inner{flex-direction:row;justify-content:space-between;text-align:left}}
+footer a{color:var(--muted);font-size:.875rem;transition:color .2s}
+footer a:hover{color:#fff}
+
+/* CTA section */
+.cta-box{background:rgba(15,17,23,.6);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:2rem;padding:3rem 2rem;text-align:center;max-width:42rem;margin:0 auto}
+@media(min-width:768px){.cta-box{padding:4rem}}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:3rem}
+@media(min-width:1024px){.contact-grid{grid-template-columns:1fr 1fr}}
+input,textarea,select{width:100%;padding:.75rem 1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:.75rem;color:#fff;font-family:var(--font-body);font-size:.9375rem;outline:none;transition:border-color .2s}
+input:focus,textarea:focus,select:focus{border-color:var(--primary)}
+select option{background:var(--bg-card);color:#fff}
+label{display:block;font-size:.8125rem;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:.375rem}
+.form-group{display:flex;flex-direction:column;gap:.375rem}
+
+/* About highlights */
+.highlight-card{display:flex;align-items:center;gap:1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.125rem 1.25rem;transition:border-color .3s}
+.highlight-card:hover{border-color:rgba(59,130,246,.2)}
+.highlight-icon{width:40px;height:40px;border-radius:.75rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.highlight-icon svg{width:20px;height:20px;stroke:var(--primary);stroke-width:1.8;fill:none}
+
+/* Use case pills */
+.biz-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.625rem 1.125rem;border-radius:9999px;background:var(--bg-card);border:1px solid rgba(255,255,255,.08);font-size:.8125rem;font-weight:600;color:#fff;transition:all .2s}
+.biz-pill:hover{border-color:rgba(59,130,246,.25);background:rgba(59,130,246,.04)}
+.biz-pill svg{width:20px;height:20px;stroke:var(--primary);stroke-width:1.8;fill:none}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="navbar">
+<div class="container nav-inner">
+<a href="/" class="nav-logo">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+Real App Solutions
+</a>
+<ul class="nav-links">
+<li><a href="#problem">Problema</a></li>
+<li><a href="#solution">Solución</a></li>
+<li><a href="#services">Servicios</a></li>
+<li><a href="#apps">Apps</a></li>
+<li><a href="#about">Nosotros</a></li>
+<li class="nav-lang"><a href="/">EN</a><a href="/es/" class="active">ES</a></li>
+<li><a href="#contact" class="btn btn-primary nav-cta">Obtén Tu App</a></li>
+</ul>
+<div class="hamburger" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+<a href="#problem" onclick="this.parentElement.classList.remove('open')">Problema</a>
+<a href="#solution" onclick="this.parentElement.classList.remove('open')">Solución</a>
+<a href="#services" onclick="this.parentElement.classList.remove('open')">Servicios</a>
+<a href="#apps" onclick="this.parentElement.classList.remove('open')">Apps</a>
+<a href="#about" onclick="this.parentElement.classList.remove('open')">Nosotros</a>
+<a href="#contact" class="btn btn-primary" onclick="this.parentElement.classList.remove('open')">Obtén Tu App</a>
+<div class="nav-lang" style="margin-top:1rem"><a href="/">EN</a><a href="/es/" class="active">ES</a></div>
+</div>
+
+<!-- HERO -->
+<section class="section" style="min-height:90vh;display:flex;align-items:center;padding-top:8rem">
+<div class="glow-orb" style="width:400px;height:400px;background:var(--primary-glow);top:20%;left:20%"></div>
+<div class="glow-orb" style="width:500px;height:500px;background:rgba(99,102,241,.08);bottom:20%;right:15%"></div>
+<div class="container" style="position:relative;z-index:1">
+<div class="grid-2" style="align-items:center">
+<div class="fade-in" style="display:flex;flex-direction:column;gap:1.5rem">
+<div style="display:flex;flex-wrap:wrap;gap:.5rem">
+<span class="pill" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.7)">
+<span style="width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block"></span>
+Apps · Sitios Web · Herramientas · SaaS
+</span>
+<span class="pill" style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);color:var(--amber)">
+⚡ 1 cliente a la vez — dedicación total
+</span>
+</div>
+<h1 style="font-size:clamp(2.25rem,5vw,3.5rem)">Construimos Productos Digitales Que <span class="text-gradient">Hacen Crecer Tu Negocio</span></h1>
+<p style="font-size:1.125rem;color:var(--muted);max-width:36rem">Desde apps móviles y sitios web profesionales hasta calculadoras, herramientas digitales y productos SaaS — construimos exactamente lo que tu negocio necesita para atraer más clientes y operar más inteligente.</p>
+<ul style="list-style:none;display:flex;flex-direction:column;gap:.75rem">
+<li style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:20px;height:20px;border-radius:50%;background:rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span style="color:rgba(255,255,255,.75);font-size:.9375rem">Apps móviles — para que tus clientes reserven, ordenen o te contacten 24/7</span></li>
+<li style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:20px;height:20px;border-radius:50%;background:rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span style="color:rgba(255,255,255,.75);font-size:.9375rem">Sitios web profesionales — construidos para convertir visitantes en clientes</span></li>
+<li style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:20px;height:20px;border-radius:50%;background:rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5.5L4 7.5L8 3" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span style="color:rgba(255,255,255,.75);font-size:.9375rem">Calculators, tools & SaaS — custom digital products for any business need</span></li>
+</ul>
+<div style="display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;color:rgba(255,255,255,.5);font-size:.8125rem">
+<span>✔ Sin conocimientos técnicos</span>
+<span>✔ Te guiamos paso a paso</span>
+<span>✔ Configuración simple y rápida</span>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:1rem;margin-top:.5rem">
+<a href="#contact" class="btn btn-primary">Iniciar Mi Proyecto</a>
+<a href="#demo" class="btn btn-outline">Ver Nuestro Trabajo</a>
+</div>
+</div>
+<div class="fade-in" style="display:flex;justify-content:center;animation-delay:.2s">
+<img src="/images/hero-app-mockup.png" alt="Custom App Mockup" style="max-width:360px;border-radius:1.5rem;filter:drop-shadow(0 0 50px var(--primary-glow))" loading="lazy">
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" class="section section-border">
+<div class="container">
+<div style="text-align:center;max-width:48rem;margin:0 auto 3.5rem">
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:1rem" class="fade-in">Deja de Perder Clientes Porque <span style="color:var(--rose)">No Tienes una App</span></h2>
+<p style="font-size:1.0625rem;color:var(--muted)" class="fade-in">Cada día, la gente busca, compara y reserva en línea. If your business isn&#39;t easy to reach from a phone, you&#39;re losing customers to businesses that are. We fix that.</p>
+</div>
+<div class="grid-3">
+<div class="card fade-in" style="padding:2rem">
+<div style="width:56px;height:56px;border-radius:1rem;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.68 13.31a16 16 0 003.41 2.6l1.27-1.27a2 2 0 012.11-.45 11.47 11.47 0 003.53.56 2 2 0 012 2v3.47a2 2 0 01-1.88 2A19.79 19.79 0 013.08 4.68 2 2 0 015 2.8h3.5a2 2 0 012 1.7 11.56 11.56 0 00.57 3.52 2 2 0 01-.45 2.11z"/><line x1="1" y1="1" x2="23" y2="23"/></svg></div>
+<h3 style="font-size:1.25rem;margin-bottom:.625rem">Tus Clientes No Te Encuentran Fácil</h3>
+<p style="color:var(--muted);line-height:1.7">When someone wants to book or order, they want to do it now — from their phone. If you&#39;re hard to reach, they move on to someone else.</p>
+</div>
+<div class="card fade-in" style="padding:2rem;animation-delay:.1s">
+<div style="width:56px;height:56px;border-radius:1rem;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 018 8c0 6-8 12-8 12S4 16 4 10a8 8 0 018-8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+<h3 style="font-size:1.25rem;margin-bottom:.625rem">Sin Sistema, Todo Desorganizado</h3>
+<p style="color:var(--muted);line-height:1.7">Juggling appointments, orders, and client info across calls, texts, and notes is exhausting. Things fall through the cracks — and it costs you.</p>
+</div>
+<div class="card fade-in" style="padding:2rem;animation-delay:.2s">
+<div style="width:56px;height:56px;border-radius:1rem;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+<h3 style="font-size:1.25rem;margin-bottom:.625rem">Tu Negocio Se Ve Atrasado</h3>
+<p style="color:var(--muted);line-height:1.7">People judge businesses by how easy they are to use. No app, no online booking, no organized system — clients quietly go to competitors who have it together.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution" class="section">
+<div class="glow-orb" style="width:700px;height:700px;background:rgba(59,130,246,.04);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+<div class="container" style="position:relative;z-index:1">
+<div class="grid-2" style="align-items:start">
+<div class="fade-in" style="display:flex;flex-direction:column;gap:1.25rem;position:sticky;top:7rem">
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem)">Lo Que Tu App <br><span class="text-gradient">Hará Por Ti</span></h2>
+<p style="font-size:1.125rem;color:var(--muted)">We don&#39;t just build pretty apps. We build tools that help your business get more clients, stay organized, and look professional — starting day one.</p>
+<div class="card" style="padding:1rem;font-size:.875rem;color:var(--muted)"><span style="color:rgba(255,255,255,.5);font-weight:600">Note on payments:</span> We set up your app to display your preferred payment method (Zelle, CashApp, Venmo, etc.) so clients know how to pay.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:1rem" class="fade-in">
+<div class="card" style="display:flex;gap:1rem;padding:1.375rem"><div style="width:44px;height:44px;border-radius:.75rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/></svg></div><div><h4 style="font-size:.9375rem;margin-bottom:.375rem">Más Reservas — Sin Contestar Llamadas</h4><p style="color:var(--muted);font-size:.8125rem;line-height:1.6">Clients send appointment or order requests directly through your app. You review and confirm when you&#39;re ready.</p></div></div>
+<div class="card" style="display:flex;gap:1rem;padding:1.375rem"><div style="width:44px;height:44px;border-radius:.75rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><h4 style="font-size:.9375rem;margin-bottom:.375rem">Tus Clientes Te Encuentran 24/7</h4><p style="color:var(--muted);font-size:.8125rem;line-height:1.6">Your app works around the clock. Clients can browse your services and send requests at any hour.</p></div></div>
+<div class="card" style="display:flex;gap:1rem;padding:1.375rem"><div style="width:44px;height:44px;border-radius:.75rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><h4 style="font-size:.9375rem;margin-bottom:.375rem">Luce Profesional y Moderno</h4><p style="color:var(--muted);font-size:.8125rem;line-height:1.6">Your own branded app instantly signals that you&#39;re a serious, established business — not just a social media page.</p></div></div>
+<div class="card" style="display:flex;gap:1rem;padding:1.375rem"><div style="width:44px;height:44px;border-radius:.75rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div><h4 style="font-size:.9375rem;margin-bottom:.375rem">Todo en Un Solo Lugar</h4><p style="color:var(--muted);font-size:.8125rem;line-height:1.6">Client info, requests, and service details — all organized. No more sticky notes, scattered DMs, or forgotten orders.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TRUST / BUILT FOR -->
+<section class="section section-border">
+<div class="glow-orb" style="width:600px;height:350px;background:rgba(59,130,246,.04);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+<div class="container" style="position:relative;z-index:1">
+<div style="text-align:center;max-width:48rem;margin:0 auto 2.5rem" class="fade-in">
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:.75rem">Creado Para Dueños de Negocios <span class="text-gradient">Como Tú</span></h2>
+<p style="color:var(--muted);font-size:1.0625rem">If you run a local business and want clients to be able to find, reach, and book you easier — this is made for you.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-bottom:4rem" class="fade-in">
+<span class="biz-pill"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12L12 12"/><circle cx="18" cy="18" r="3"/><path d="M15.88 15.88L12 12"/></svg>Barbers &amp; Stylists</span>
+<span class="biz-pill"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8"><path d="M12 3l1.912 5.813h6.123l-4.973 3.615 1.912 5.813L12 14.628l-4.974 3.613 1.912-5.813L3.965 8.813h6.123z"/></svg>Nail Techs</span>
+<span class="biz-pill"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8"><path d="M12 2a5 5 0 015 5c0 4-5 7-5 7s-5-3-5-7a5 5 0 015-5z"/><rect x="2" y="16" width="20" height="6" rx="2"/></svg>Bakeries &amp; Cake Businesses</span>
+<span class="biz-pill"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Beauty &amp; Spa</span>
+<span class="biz-pill"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>Service Providers</span>
+<span class="biz-pill"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Any Local Business</span>
+</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-border">
+<div class="container">
+<div style="text-align:center;max-width:36rem;margin:0 auto 3.5rem" class="fade-in">
+<span class="pill" style="background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);color:var(--primary);margin-bottom:1.25rem">Proceso Simple</span>
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:.75rem">Obtén Tu App en <span class="text-gradient">3 Pasos Simples</span></h2>
+<p style="color:var(--muted);font-size:1.0625rem">From first conversation to live app — we keep it simple, fast, and stress-free.</p>
+</div>
+<div class="grid-3" style="margin-bottom:3rem">
+<div class="card fade-in" style="padding:2rem;border-radius:1.5rem">
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem">
+<div style="width:56px;height:56px;border-radius:1rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--font-display);font-size:1.375rem;font-weight:800;color:var(--primary)">01</span></div>
+<div style="height:1px;flex:1;background:linear-gradient(90deg,rgba(59,130,246,.2),transparent)"></div>
+</div>
+<h3 style="font-size:1.125rem;margin-bottom:.5rem">Diseñamos Tu App</h3>
+<p style="color:var(--muted);font-size:.9375rem;line-height:1.7">Tell us about your business and what you need. We handle everything — design, setup, and branding.</p>
+<p style="color:rgba(255,255,255,.3);font-size:.8125rem;font-style:italic;margin-top:auto;padding-top:.75rem">No forms to fill out, no tech decisions to make. Just a conversation.</p>
+</div>
+<div class="card fade-in" style="padding:2rem;border-radius:1.5rem;animation-delay:.12s">
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem">
+<div style="width:56px;height:56px;border-radius:1rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--font-display);font-size:1.375rem;font-weight:800;color:var(--primary)">02</span></div>
+<div style="height:1px;flex:1;background:linear-gradient(90deg,rgba(59,130,246,.2),transparent)"></div>
+</div>
+<h3 style="font-size:1.125rem;margin-bottom:.5rem">Tú Revisas y Apruebas</h3>
+<p style="color:var(--muted);font-size:.9375rem;line-height:1.7">We show you your app before it goes live. You give feedback, we make adjustments, and you approve when you&#39;re happy.</p>
+<p style="color:rgba(255,255,255,.3);font-size:.8125rem;font-style:italic;margin-top:auto;padding-top:.75rem">You stay in control without needing to touch a single line of code.</p>
+</div>
+<div class="card fade-in" style="padding:2rem;border-radius:1.5rem;animation-delay:.24s">
+<div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem">
+<div style="width:56px;height:56px;border-radius:1rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--font-display);font-size:1.375rem;font-weight:800;color:var(--primary)">03</span></div>
+<div style="height:1px;flex:1;background:linear-gradient(90deg,rgba(59,130,246,.2),transparent)"></div>
+</div>
+<h3 style="font-size:1.125rem;margin-bottom:.5rem">Empiezas a Recibir Clientes</h3>
+<p style="color:var(--muted);font-size:.9375rem;line-height:1.7">Your app goes live and clients can start booking, ordering, or reaching out right away — directly through your app.</p>
+<p style="color:rgba(255,255,255,.3);font-size:.8125rem;font-style:italic;margin-top:auto;padding-top:.75rem">Ready to use from day one. No complicated onboarding.</p>
+</div>
+</div>
+<div style="text-align:center" class="fade-in">
+<a href="#contact" class="btn btn-primary" style="padding:1rem 2.5rem;font-size:1.0625rem">Reserva Tu Lugar →</a>
+<p style="color:var(--muted);font-size:.8125rem;margin-top:.75rem">Un proyecto a la vez. Dedicación total al tuyo.</p>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section section-border">
+<div class="container">
+<div style="text-align:center;max-width:48rem;margin:0 auto 2.5rem" class="fade-in">
+<span class="pill" style="background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);color:var(--primary);margin-bottom:1.25rem">Lo Que Construimos</span>
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:.75rem">Cuatro Tipos de Productos Digitales, <span class="text-gradient">Un Equipo</span></h2>
+<p style="color:var(--muted);font-size:1.0625rem">Whether you need an app, a website, a tool, or a full platform — we build it right.</p>
+</div>
+<div class="grid-4" style="margin-bottom:5rem">
+<div class="card fade-in" style="padding:1.5rem;display:flex;flex-direction:column;gap:1rem"><div style="width:48px;height:48px;border-radius:.75rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h3 style="font-size:1.0625rem">Apps Móviles</h3><p style="color:var(--muted);font-size:.8125rem;line-height:1.6">Custom installable apps for small businesses — so your clients can book, order, and reach you from their phone.</p></div>
+<div class="card fade-in" style="padding:1.5rem;display:flex;flex-direction:column;gap:1rem;animation-delay:.08s"><div style="width:48px;height:48px;border-radius:.75rem;background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.15);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><h3 style="font-size:1.0625rem">Sitios Web Profesionales</h3><p style="color:var(--muted);font-size:.8125rem;line-height:1.6">High-converting business websites built to look credible, load fast, and turn visitors into paying clients.</p></div>
+<div class="card fade-in" style="padding:1.5rem;display:flex;flex-direction:column;gap:1rem;animation-delay:.16s"><div style="width:48px;height:48px;border-radius:.75rem;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.15);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg></div><h3 style="font-size:1.0625rem">Calculadoras y Herramientas</h3><p style="color:var(--muted);font-size:.8125rem;line-height:1.6">Interactive tools that help your business generate leads, quote prices, and close clients automatically.</p></div>
+<div class="card fade-in" style="padding:1.5rem;display:flex;flex-direction:column;gap:1rem;animation-delay:.24s"><div style="width:48px;height:48px;border-radius:.75rem;background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.15);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h3 style="font-size:1.0625rem">Productos SaaS</h3><p style="color:var(--muted);font-size:.8125rem;line-height:1.6">Full software platforms built for your specific industry — subscription-based, multi-user, and scalable.</p></div>
+</div>
+
+<!-- PRICING -->
+<div style="text-align:center;max-width:48rem;margin:0 auto 2.5rem" class="fade-in">
+<div style="display:inline-flex;align-items:center;gap:.75rem;padding:.625rem 1.25rem;border-radius:1rem;background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.12);color:rgba(255,255,255,.7);font-size:.875rem;margin-bottom:1.5rem"><span style="color:var(--primary)">💡</span> Instead of paying monthly subscription fees forever — own your product with a single one-time payment.</div>
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:.75rem">Precios Flexibles, <span class="text-gradient">Resultados Reales</span></h2>
+<p style="color:var(--muted);font-size:1.0625rem;margin-bottom:1rem">Pick the model that fits how you want to work with us.</p>
+<span class="pill" style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);color:var(--amber)"><span style="width:8px;height:8px;border-radius:50%;background:var(--amber);display:inline-block"></span> ⚡ 1 cliente a la vez — dedicación total</span>
+</div>
+<div class="pricing-grid">
+<div class="pricing-card popular fade-in">
+<span class="pricing-badge primary">Más Popular</span>
+<h3 style="font-size:1.125rem;font-weight:700;margin-bottom:.25rem;margin-top:.5rem">Construcción Única</h3>
+<p style="color:var(--muted);font-size:.75rem;margin-bottom:1rem;line-height:1.5">Pay once, own it forever. No recurring fees for the build itself.</p>
+<div><span class="price">$259</span> <span class="price-suffix">starter / $499 business</span></div>
+<p style="color:var(--primary);font-size:.75rem;font-weight:500;margin-top:.375rem">I work with one client at a time to guarantee quality.</p>
+<p style="color:rgba(245,158,11,.7);font-size:.75rem;font-weight:500;margin-top:.25rem">⚡ One project at a time — quality guaranteed</p>
+<ul class="feature-list"><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full app or website built for your business</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Your branding, colors, and content</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Installable on any phone</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Delivered and ready to use</li></ul>
+<a href="#contact" class="btn btn-primary" style="width:100%;padding:.75rem">Iniciar Mi Proyecto</a>
+<p style="color:var(--muted);font-size:.6875rem;text-align:center;margin-top:.5rem">Sin compromiso.</p>
+</div>
+<div class="pricing-card fade-in" style="animation-delay:.1s">
+<span class="pricing-badge outline">Add-On</span>
+<h3 style="font-size:1.125rem;font-weight:700;margin-bottom:.25rem;margin-top:.5rem">Monthly Maintenance</h3>
+<p style="color:var(--muted);font-size:.75rem;margin-bottom:1rem;line-height:1.5">Keep your product updated, live, and running smoothly.</p>
+<div><span class="price">From $49</span> <span class="price-suffix">/ month</span></div>
+<p style="color:var(--muted);font-size:.75rem;font-weight:500;margin-top:.375rem">Add to any one-time build.</p>
+<ul class="feature-list"><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Hosting &amp; uptime monitoring</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Content &amp; menu updates</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Bug fixes and improvements</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Priority email support</li></ul>
+<a href="#contact" class="btn btn-outline" style="width:100%;padding:.75rem">Ask About Maintenance</a>
+<p style="color:var(--muted);font-size:.6875rem;text-align:center;margin-top:.5rem">Sin compromiso.</p>
+</div>
+<div class="pricing-card fade-in" style="animation-delay:.2s">
+<span class="pricing-badge outline">All-Inclusive</span>
+<h3 style="font-size:1.125rem;font-weight:700;margin-bottom:.25rem;margin-top:.5rem">App Subscription</h3>
+<p style="color:var(--muted);font-size:.75rem;margin-bottom:1rem;line-height:1.5">Get your app built and maintained under one ongoing monthly plan.</p>
+<div><span class="price">From $99</span> <span class="price-suffix">/ month</span></div>
+<p style="color:var(--muted);font-size:.75rem;font-weight:500;margin-top:.375rem">Great if you prefer spreading costs over time.</p>
+<ul class="feature-list"><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>App built and delivered</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Hosting &amp; maintenance included</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Monthly feature updates</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ongoing support</li></ul>
+<a href="#contact" class="btn btn-outline" style="width:100%;padding:.75rem">Ask About Subscription</a>
+<p style="color:var(--muted);font-size:.6875rem;text-align:center;margin-top:.5rem">Sin compromiso.</p>
+</div>
+<div class="pricing-card fade-in" style="animation-delay:.3s">
+<span class="pricing-badge outline">Custom</span>
+<h3 style="font-size:1.125rem;font-weight:700;margin-bottom:.25rem;margin-top:.5rem">Combined Package</h3>
+<p style="color:var(--muted);font-size:.75rem;margin-bottom:1rem;line-height:1.5">A tailored bundle for larger or more complex projects.</p>
+<div><span class="price">Let&#39;s Talk</span></div>
+<p style="color:var(--muted);font-size:.75rem;font-weight:500;margin-top:.375rem">For businesses with specific or growing needs.</p>
+<ul class="feature-list"><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Everything in Business Build</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Custom feature development</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Multi-platform delivery</li><li class="feature-item"><span class="feature-dot"><svg viewBox="0 0 10 10"><path d="M2 5.5L4 7.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Dedicated support &amp; reporting</li></ul>
+<a href="#contact" class="btn btn-outline" style="width:100%;padding:.75rem">Get a Custom Quote</a>
+<p style="color:var(--muted);font-size:.6875rem;text-align:center;margin-top:.5rem">Sin compromiso.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- OUR APPS -->
+<section id="apps" class="section section-border">
+<div class="container">
+<div style="text-align:center;max-width:48rem;margin:0 auto 3rem" class="fade-in">
+<span class="pill" style="background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);color:var(--primary);margin-bottom:1.25rem">Nuestras Apps</span>
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:.75rem">Apps Creadas para <span class="text-gradient">Negocios Reales</span></h2>
+<p style="color:var(--muted);font-size:1.0625rem">Every app in our portfolio was designed to solve a specific problem for a specific type of business. No generic templates.</p>
+</div>
+<div class="grid-2">
+<div class="app-card fade-in" style="padding:1.5rem">
+<div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem"><div style="width:48px;height:48px;border-radius:.75rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12L12 12"/><circle cx="18" cy="18" r="3"/><path d="M15.88 15.88L12 12"/></svg></div><div><h3 style="font-size:1.0625rem;font-weight:700">Barber Master Suite</h3><span class="status-live">● En Google Play</span></div></div>
+<p style="color:var(--muted);font-size:.8125rem;line-height:1.6;margin-bottom:1rem">Complete barbershop management — appointments, clients, services, revenue tracking, and more. Offline-first, bilingual EN/ES.</p>
+<div style="display:flex;flex-wrap:wrap;gap:.375rem;margin-bottom:1rem"><span class="app-tag">Appointments</span><span class="app-tag">Client profiles</span><span class="app-tag">Revenue reports</span><span class="app-tag">Offline-first</span></div>
+<a href="https://barbersuite.realappsolutions.com" target="_blank" rel="noreferrer" style="color:var(--primary);font-size:.8125rem;font-weight:600">Visitar App →</a>
+</div>
+<div class="app-card fade-in" style="padding:1.5rem;animation-delay:.1s">
+<div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem"><div style="width:48px;height:48px;border-radius:.75rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--indigo)" stroke-width="1.5"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12L12 12"/><circle cx="18" cy="18" r="3"/><path d="M15.88 15.88L12 12"/></svg></div><div><h3 style="font-size:1.0625rem;font-weight:700">Barber Desk</h3><span class="status-soon">● Próximamente</span></div></div>
+<p style="color:var(--muted);font-size:.8125rem;line-height:1.6;margin-bottom:1rem">Multi-barber shop management with individual barber profiles, client booking system, and detailed analytics per barber.</p>
+<div style="display:flex;flex-wrap:wrap;gap:.375rem;margin-bottom:1rem"><span class="app-tag">Multi-barber</span><span class="app-tag">Client booking</span><span class="app-tag">Per-barber analytics</span><span class="app-tag">PRO subscriptions</span></div>
+<a href="https://barberdesk.realappsolutions.com" target="_blank" rel="noreferrer" style="color:var(--primary);font-size:.8125rem;font-weight:600">Visitar App →</a>
+</div>
+<div class="app-card fade-in" style="padding:1.5rem;animation-delay:.2s">
+<div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem"><div style="width:48px;height:48px;border-radius:.75rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div><div><h3 style="font-size:1.0625rem;font-weight:700">Tattoo Master</h3><span class="status-soon">● Próximamente</span></div></div>
+<p style="color:var(--muted);font-size:.8125rem;line-height:1.6;margin-bottom:1rem">Studio management for tattoo artists — appointments with reference images, consent forms, aftercare instructions, and commission tracking.</p>
+<div style="display:flex;flex-wrap:wrap;gap:.375rem;margin-bottom:1rem"><span class="app-tag">Reference images</span><span class="app-tag">Consent forms</span><span class="app-tag">Aftercare</span><span class="app-tag">Commissions</span></div>
+<a href="https://tattoomaster.realappsolutions.com" target="_blank" rel="noreferrer" style="color:var(--primary);font-size:.8125rem;font-weight:600">Visitar App →</a>
+</div>
+<div class="app-card fade-in" style="padding:1.5rem;animation-delay:.3s">
+<div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem"><div style="width:48px;height:48px;border-radius:.75rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5"><path d="M12 2a5 5 0 015 5c0 4-5 7-5 7s-5-3-5-7a5 5 0 015-5z"/><rect x="2" y="16" width="20" height="6" rx="2"/></svg></div><div><h3 style="font-size:1.0625rem;font-weight:700">CakeNutz Calculator</h3><span class="status-soon">● Próximamente</span></div></div>
+<p style="color:var(--muted);font-size:.8125rem;line-height:1.6;margin-bottom:1rem">Free bakery cost calculator — calculate ingredient costs, pricing, and profit margins for cakes and baked goods. 100% offline.</p>
+<div style="display:flex;flex-wrap:wrap;gap:.375rem"><span class="app-tag">Ingredient costs</span><span class="app-tag">Profit margins</span><span class="app-tag">100% free</span><span class="app-tag">Works offline</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DEMO -->
+<section id="demo" class="section" style="background:#050508;padding:7rem 0">
+<div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(128,128,128,.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(128,128,128,.03) 1px,transparent 1px);background-size:24px 24px"></div>
+<div class="glow-orb" style="width:700px;height:350px;background:var(--accent-gold-glow);top:30%;left:50%;transform:translateX(-50%)"></div>
+<div class="container" style="position:relative;z-index:1">
+<div style="text-align:center;max-width:48rem;margin:0 auto 3.5rem" class="fade-in">
+<span class="pill" style="background:var(--accent-gold-glow);border:1px solid rgba(201,168,76,.35);color:var(--accent-gold);margin-bottom:1.5rem"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent-gold);display:inline-block"></span> Real App. Real Business. Real Results.</span>
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:1rem">Mira La App <span class="text-gradient">En Acción</span></h2>
+<p style="color:var(--muted);font-size:1.0625rem">This is a real app we built for <span style="color:#fff;font-weight:600">Richard Too Cool</span>, a Master Barber. Every screen you see below is live and in use today.</p>
+</div>
+<div class="screenshot-grid" style="margin-bottom:5rem">
+<div class="screenshot-card fade-in"><img src="/images/screenshots/home-dashboard.jpeg" alt="Revenue dashboard" loading="lazy"><p class="caption">Revenue dashboard</p><p class="sub">Today&#39;s income &amp; appointments</p></div>
+<div class="screenshot-card fade-in" style="animation-delay:.05s"><img src="/images/screenshots/schedule-screen.jpeg" alt="Daily schedule" loading="lazy"><p class="caption">Daily schedule</p><p class="sub">Full timeline with 1-tap checkout</p></div>
+<div class="screenshot-card fade-in" style="animation-delay:.1s"><img src="/images/screenshots/booking-modal.jpeg" alt="Booking system" loading="lazy"><p class="caption">Booking system</p><p class="sub">Clients book 24/7</p></div>
+<div class="screenshot-card fade-in" style="animation-delay:.15s"><img src="/images/screenshots/clients-list.jpeg" alt="Client management" loading="lazy"><p class="caption">Client management</p><p class="sub">Every client in one place</p></div>
+<div class="screenshot-card fade-in" style="animation-delay:.2s"><img src="/images/screenshots/client-detail.jpeg" alt="Client profiles" loading="lazy"><p class="caption">Client profiles</p><p class="sub">Notes &amp; visit history</p></div>
+<div class="screenshot-card fade-in" style="animation-delay:.25s"><img src="/images/screenshots/services-menu.jpeg" alt="Service control" loading="lazy"><p class="caption">Service control</p><p class="sub">Menu &amp; prices anytime</p></div>
+<div class="screenshot-card fade-in" style="animation-delay:.3s"><img src="/images/screenshots/reports-analytics.jpeg" alt="Reports &amp; analytics" loading="lazy"><p class="caption">Reports &amp; analytics</p><p class="sub">Revenue at a glance</p></div>
+<div class="screenshot-card fade-in" style="animation-delay:.35s"><img src="/images/screenshots/splash-screen.jpeg" alt="Branded splash" loading="lazy"><p class="caption">Branded splash</p><p class="sub">Your logo, your identity</p></div>
+</div>
+<div style="text-align:center" class="fade-in">
+<div style="display:inline-flex;flex-direction:column;align-items:center;gap:1.5rem;background:rgba(15,17,23,.5);backdrop-filter:blur(16px);border:1px solid rgba(201,168,76,.15);border-radius:2rem;padding:2.5rem;max-width:32rem">
+<div style="width:48px;height:48px;border-radius:1rem;background:var(--accent-gold-glow);border:1px solid rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;font-size:1.5rem">✂️</div>
+<h3 style="font-size:1.5rem">Obtén Tu Propia App Como Esta</h3>
+<p style="color:var(--muted);font-size:.875rem">We can build the same for your barbershop, bakery, or service business — branded to you, ready to use.</p>
+<a href="#contact" class="btn btn-primary">Quiero Una Como Esta →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section section-border">
+<div class="glow-orb" style="width:500px;height:500px;background:rgba(59,130,246,.04);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+<div class="container" style="position:relative;z-index:1">
+<div class="grid-2" style="align-items:center">
+<div class="fade-in" style="display:flex;flex-direction:column;gap:1.25rem">
+<span class="pill" style="background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);color:var(--primary)">Sobre Nosotros</span>
+<h2 style="font-size:clamp(1.75rem,4vw,2.5rem)">Creado por Alguien Que Sabe <span class="text-gradient">Lo Que Se Necesita</span></h2>
+<p style="color:var(--muted);line-height:1.8">Real App Solutions was founded by Leo, a Naples-based entrepreneur who&#39;s spent years in the trenches of small business — from running a professional bakery to designing brands from scratch.</p>
+<p style="color:var(--muted);line-height:1.8">That real-world experience is what drives everything we build. No corporate fluff. No overcomplicated tech. Just practical digital products that solve real problems for real businesses.</p>
+<p style="color:var(--muted);line-height:1.8">Today, NutzLabs — our indie app studio — has a growing portfolio of published apps on Google Play Store, serving barbershops, tattoo studios, bakeries, auto shops, and other service businesses. Every logo, brand identity, and product concept is designed and directed in-house.</p>
+<p style="color:#fff;font-weight:600;font-size:1.125rem">We don&#39;t outsource your vision. We build it with you.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:.875rem" class="fade-in">
+<div class="highlight-card"><div class="highlight-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><span style="font-weight:500;color:rgba(255,255,255,.85)">Years of hands-on small business experience</span></div>
+<div class="highlight-card"><div class="highlight-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div><span style="font-weight:500;color:rgba(255,255,255,.85)">Every logo &amp; brand identity designed in-house</span></div>
+<div class="highlight-card"><div class="highlight-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span style="font-weight:500;color:rgba(255,255,255,.85)">Growing portfolio on Google Play Store</span></div>
+<div class="highlight-card"><div class="highlight-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><span style="font-weight:500;color:rgba(255,255,255,.85)">Bilingual: English &amp; Spanish</span></div>
+<div style="margin-top:.5rem;padding:1.25rem;border-radius:var(--radius);background:linear-gradient(135deg,rgba(59,130,246,.06),rgba(99,102,241,.06));border:1px solid rgba(59,130,246,.15)">
+<p style="font-size:.875rem;color:rgba(255,255,255,.6)"><span style="color:var(--primary);font-weight:700">Based in Southwest Florida</span> — One client at a time, full dedication to every project.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MICRO CTA -->
+<section class="section section-border" style="padding:4rem 0">
+<div class="container" style="text-align:center">
+<h2 style="font-size:clamp(1.25rem,3vw,1.75rem);margin-bottom:.5rem" class="fade-in">Esto Es Perfecto Si Quieres:</h2>
+<p style="color:var(--muted);font-size:.875rem;margin-bottom:2rem" class="fade-in">Sound familiar? You&#39;re in the right place.</p>
+<div class="grid-3 fade-in" style="max-width:48rem;margin:0 auto">
+<div class="card" style="text-align:center;padding:1.5rem"><span style="font-size:1.75rem;display:block;margin-bottom:.75rem">🚫</span><p style="font-weight:600;font-size:.875rem">Stop missing clients who can&#39;t reach you</p></div>
+<div class="card" style="text-align:center;padding:1.5rem"><span style="font-size:1.75rem;display:block;margin-bottom:.75rem">✨</span><p style="font-weight:600;font-size:.875rem">Look more professional than your competitors</p></div>
+<div class="card" style="text-align:center;padding:1.5rem"><span style="font-size:1.75rem;display:block;margin-bottom:.75rem">📈</span><p style="font-weight:600;font-size:.875rem">Grow your business without working harder</p></div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="padding:6rem 0;background:rgba(59,130,246,.03);border-top:1px solid rgba(59,130,246,.08);border-bottom:1px solid rgba(59,130,246,.08)">
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(59,130,246,.12),var(--bg) 70%)"></div>
+<div class="container" style="position:relative;z-index:1">
+<div class="cta-box fade-in">
+<span class="pill" style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);color:var(--amber);margin-bottom:2rem"><span style="width:8px;height:8px;border-radius:50%;background:var(--amber);display:inline-block"></span> 1 client at a time — reach out before I start the next</span>
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:1rem">¿Listo Para Conseguir <span class="text-gradient">Más Clientes?</span></h2>
+<p style="color:var(--muted);font-size:1.0625rem;margin-bottom:.5rem;max-width:32rem;margin-left:auto;margin-right:auto">Stop relying only on social media. Own your platform. Grow your business.</p>
+<p style="color:var(--muted);font-size:.9375rem;margin-bottom:2.5rem;max-width:28rem;margin-left:auto;margin-right:auto">We build your app in days — not months. No tech skills needed on your end.</p>
+<a href="#contact" class="btn btn-primary" style="padding:1rem 2.5rem;font-size:1.0625rem">Obtén Mi App Hoy →</a>
+<p style="color:var(--muted);font-size:.8125rem;margin-top:1rem">Quick to get started. Sin compromiso.</p>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-border" style="padding:6rem 0">
+<div class="container">
+<div class="contact-grid">
+<div class="fade-in" style="display:flex;flex-direction:column;gap:2rem">
+<div>
+<h2 style="font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:1rem">Contáctanos</h2>
+<p style="color:var(--muted);font-size:1.0625rem">Respondemos en 24 horas. Sin discurso de ventas — just a real conversation about your business and how we can help.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:1rem">
+<a href="https://wa.me/12397370365?text=Hi%20I%27m%20interested%20in%20getting%20an%20app%20for%20my%20business" target="_blank" rel="noreferrer" style="display:flex;align-items:center;gap:1rem;padding:1.25rem;border-radius:var(--radius);background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.25);width:fit-content">
+<div style="width:48px;height:48px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.3)"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg></div>
+<div><p style="font-size:.8125rem;color:#25D366;font-weight:500">Respuesta rápida</p><p style="font-size:1.0625rem;font-weight:700">Chatea con nosotros en WhatsApp</p></div>
+</a>
+<a href="mailto:realappsolutions@gmail.com" style="display:flex;align-items:center;gap:1rem;padding:1.25rem;border-radius:var(--radius);background:var(--bg-card);border:1px solid var(--border);width:fit-content">
+<div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+<div><p style="font-size:.8125rem;color:var(--muted);font-weight:500">Escríbenos</p><p style="font-size:1.0625rem;font-weight:700">realappsolutions@gmail.com</p></div>
+</a>
+</div>
+</div>
+<div class="fade-in" style="background:var(--bg-card);padding:2rem;border-radius:1.5rem;border:1px solid var(--border)">
+<form id="contact-form" style="display:flex;flex-direction:column;gap:1.25rem">
+<div class="form-group"><label for="name">Tu Nombre</label><input type="text" id="name" name="name" placeholder="Juan Pérez" required></div>
+<div class="form-group"><label for="biz">Tipo de Negocio</label><select id="biz" name="businessType" required><option value="">Select your business type</option><option value="barbershop">Barbershop / Salon</option><option value="bakery">Bakery / Cake Business</option><option value="beauty">Beauty / Nails / Spa</option><option value="tattoo">Tattoo Studio</option><option value="auto">Auto / Mechanic Shop</option><option value="restaurant">Restaurant / Food</option><option value="other">Other Service Business</option></select></div>
+<div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="+1 (239) 000-0000" required></div>
+<div class="form-group"><label for="msg">Tell us about your business</label><textarea id="msg" name="message" rows="4" placeholder="What do you need? An app, a website, or something else? Tell us a bit about your business..." required></textarea></div>
+<button type="submit" class="btn btn-primary" style="width:100%;padding:.875rem">Enviar Mensaje por WhatsApp</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container inner">
+<div style="display:flex;flex-direction:column;gap:.5rem">
+<a href="/" style="display:flex;align-items:center;gap:.5rem;font-family:var(--font-display);font-weight:700;font-size:1.0625rem">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+Real App Solutions
+</a>
+<p style="color:var(--muted);font-size:.8125rem">Apps que trabajan tan duro como tú.</p>
+</div>
+<div style="display:flex;gap:1.5rem"><a href="/privacy">Política de Privacidad</a><a href="/terms">Términos de Servicio</a></div>
+<p style="color:var(--muted);font-size:.8125rem">&copy; 2026 Real App Solutions. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a class="wa-fab" href="https://wa.me/12397370365?text=Hi%20I%27m%20interested%20in%20getting%20an%20app%20for%20my%20business" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+</a>
+
+<script>
+// Navbar scroll
+window.addEventListener("scroll",()=>{document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>20)});
+
+// Fade-in on scroll
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}})},{threshold:.1,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".fade-in").forEach(el=>obs.observe(el));
+
+// Contact form → WhatsApp
+document.getElementById("contact-form").addEventListener("submit",function(e){
+e.preventDefault();
+const n=document.getElementById("name").value;
+const b=document.getElementById("biz").value;
+const p=document.getElementById("phone").value;
+const m=document.getElementById("msg").value;
+const text="Hi! I'm interested in getting an app for my business.\n\nName: "+n+"\nBusiness Type: "+b+"\nPhone: "+p+"\nMessage: "+m;
+window.open("https://wa.me/12397370365?text="+encodeURIComponent(text),"_blank");
+});
+</script>
+</body>
+</html>
