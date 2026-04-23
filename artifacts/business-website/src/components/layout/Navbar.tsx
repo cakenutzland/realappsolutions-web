@@ -20,13 +20,15 @@ export default function Navbar() {
         { name: "Problema", href: "#problem" },
         { name: "Solución", href: "#solution" },
         { name: "Servicios", href: "#services" },
-        { name: "Demo", href: "#demo" },
+        { name: "Apps", href: "#apps" },
+        { name: "Nosotros", href: "#about" },
       ]
     : [
         { name: "Problem", href: "#problem" },
         { name: "Solution", href: "#solution" },
         { name: "Services", href: "#services" },
-        { name: "Demo", href: "#demo" },
+        { name: "Apps", href: "#apps" },
+        { name: "About", href: "#about" },
       ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
