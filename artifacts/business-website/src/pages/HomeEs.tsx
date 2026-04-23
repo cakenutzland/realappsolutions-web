@@ -7,7 +7,9 @@ import SolutionEs from "@/components/sections/es/Solution";
 import TrustEs from "@/components/sections/es/Trust";
 import ProcessEs from "@/components/sections/es/Process";
 import ServicesEs from "@/components/sections/es/Services";
+import OurAppsEs from "@/components/sections/es/OurApps";
 import DemoEs from "@/components/sections/es/Demo";
+import AboutEs from "@/components/sections/es/About";
 import MicroCtaEs from "@/components/sections/es/MicroCta";
 import CtaEs from "@/components/sections/es/Cta";
 import ContactEs from "@/components/sections/es/Contact";
@@ -24,7 +26,9 @@ export default function HomeEs() {
         <TrustEs />
         <ProcessEs />
         <ServicesEs />
+        <OurAppsEs />
         <DemoEs />
+        <AboutEs />
         <MicroCtaEs />
         <CtaEs />
         <ContactEs />
