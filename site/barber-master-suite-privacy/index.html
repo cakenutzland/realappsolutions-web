@@ -12,139 +12,43 @@
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       :root {
-        --bg: #09090b;
-        --card: #111113;
-        --border: rgba(255,255,255,0.08);
-        --text: #fafafa;
-        --muted: #71717a;
-        --primary: #8b5cf6;
+        --bg: #09090b; --card: #111113; --border: rgba(255,255,255,0.08);
+        --text: #fafafa; --muted: #a1a1aa; --primary: #C9A84C;
         --divider: rgba(255,255,255,0.06);
       }
       html { scroll-behavior: smooth; }
-      body {
-        background: var(--bg);
-        color: var(--text);
-        font-family: 'Inter', system-ui, sans-serif;
-        font-size: 16px;
-        line-height: 1.7;
-        -webkit-font-smoothing: antialiased;
-      }
+      body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
       a { color: var(--primary); text-decoration: none; }
       a:hover { text-decoration: underline; }
-
-      /* Nav */
-      .nav {
-        position: sticky; top: 0; z-index: 50;
-        background: rgba(9,9,11,0.85);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border);
-        padding: 0 1.5rem;
-        height: 64px;
-        display: flex; align-items: center; justify-content: space-between;
-      }
-      .nav-logo {
-        display: flex; align-items: center; gap: 0.5rem;
-        font-weight: 700; font-size: 1.1rem; color: var(--text);
-        text-decoration: none;
-      }
-      .nav-back {
-        font-size: 0.85rem; color: var(--muted);
-        display: flex; align-items: center; gap: 0.3rem;
-      }
+      .nav { position: sticky; top: 0; z-index: 50; background: rgba(9,9,11,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+      .nav-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+      .nav-back { font-size: 0.85rem; color: var(--muted); display: flex; align-items: center; gap: 0.3rem; }
       .nav-back:hover { color: var(--text); text-decoration: none; }
-
-      /* Main */
-      main {
-        max-width: 740px;
-        margin: 0 auto;
-        padding: 3.5rem 1.5rem 5rem;
-      }
-
-      /* Header */
+      main { max-width: 740px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
       .page-header { margin-bottom: 3rem; }
-      .app-badge {
-        display: inline-flex; align-items: center; gap: 0.4rem;
-        font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
-        text-transform: uppercase; color: var(--primary);
-        background: rgba(139,92,246,0.1);
-        border: 1px solid rgba(139,92,246,0.25);
-        border-radius: 999px;
-        padding: 0.3rem 0.8rem;
-        margin-bottom: 1.2rem;
-      }
-      h1 {
-        font-size: clamp(1.8rem, 4vw, 2.8rem);
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 0.75rem;
-      }
-      .meta {
-        font-size: 0.85rem;
-        color: var(--muted);
-        display: flex; flex-wrap: wrap; gap: 1rem;
-      }
-      .meta span { display: flex; align-items: center; gap: 0.35rem; }
-
-      /* Sections */
+      .app-badge { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary); background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25); border-radius: 999px; padding: 0.3rem 0.8rem; margin-bottom: 1.2rem; }
+      h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.2; margin-bottom: 0.75rem; }
+      .meta { font-size: 0.85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 1rem; }
       .sections { display: flex; flex-direction: column; gap: 0; }
-      .section {
-        border-top: 1px solid var(--divider);
-        padding: 2rem 0;
-      }
+      .section { border-top: 1px solid var(--divider); padding: 2rem 0; }
       .section:last-child { padding-bottom: 0; }
-      h2 {
-        font-size: 1.05rem;
-        font-weight: 600;
-        color: var(--text);
-        margin-bottom: 0.6rem;
-      }
-      p {
-        color: var(--muted);
-        font-size: 0.95rem;
-        line-height: 1.75;
-        margin-bottom: 0.5rem;
-      }
+      h2 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 0.6rem; }
+      p { color: var(--muted); font-size: 0.95rem; line-height: 1.75; margin-bottom: 0.5rem; }
       p:last-child { margin-bottom: 0; }
-
-      /* Divider between languages */
-      .lang-divider {
-        margin: 3.5rem 0;
-        display: flex; align-items: center; gap: 1rem;
-      }
-      .lang-divider::before, .lang-divider::after {
-        content: '';
-        flex: 1;
-        height: 1px;
-        background: var(--border);
-      }
-      .lang-divider span {
-        font-size: 0.78rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--muted);
-        white-space: nowrap;
-      }
-
-      /* Footer */
-      footer {
-        border-top: 1px solid var(--border);
-        padding: 2rem 1.5rem;
-        text-align: center;
-        font-size: 0.8rem;
-        color: var(--muted);
-      }
-      footer a { color: var(--muted); }
-      footer a:hover { color: var(--text); }
+      ul { color: var(--muted); font-size: 0.95rem; line-height: 1.75; padding-left: 1.4rem; margin-bottom: 0.5rem; }
+      li { margin-bottom: 0.25rem; }
+      .lang-divider { margin: 3.5rem 0; display: flex; align-items: center; gap: 1rem; }
+      .lang-divider::before, .lang-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+      .lang-divider span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+      footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; font-size: 0.8rem; color: var(--muted); }
+      footer a { color: var(--muted); } footer a:hover { color: var(--text); }
     </style>
   </head>
   <body>
-
     <nav class="nav">
       <a href="/" class="nav-logo">Real App Solutions</a>
       <a href="/" class="nav-back">← Back to Home</a>
     </nav>
-
     <main>
 
       <!-- ══════════════ ENGLISH ══════════════ -->
@@ -153,7 +57,7 @@
         <h1>Barber Master Suite</h1>
         <div class="meta">
           <span>Developer: NutzLabs / Real App Solutions</span>
-          <span>Last updated: March 2026</span>
+          <span>Last updated: April 2026</span>
           <span><a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a></span>
         </div>
       </div>
@@ -162,58 +66,95 @@
 
         <div class="section">
           <h2>Introduction</h2>
-          <p>Barber Master Suite is a barbershop management app for iOS and Android that helps barbers manage appointments, clients, services, and business reports.</p>
+          <p>This Privacy Policy explains how Barber Master Suite ("the App", "we", "our") collects, uses, and protects your information. The App is a personal management tool designed for individual barbers, available on Android via Google Play and as a Progressive Web App (PWA) at <a href="https://barbersuite.realappsolutions.com">barbersuite.realappsolutions.com</a>. By using the App, you agree to this Policy.</p>
         </div>
 
         <div class="section">
           <h2>Data We Collect</h2>
-          <p>The app collects: shop name, owner name, city, phone, and email (used for cloud backup authentication). A backup password is stored as an encrypted hash — we never store plain-text passwords.</p>
-          <p>Appointment data, client names, services, and business reports are stored locally on your device.</p>
+          <p>The App is local-first by design. All your business data (clients, appointments, services, transactions, tips, client addresses) is stored directly on your device using browser localStorage. We do not transmit this data to our servers unless you explicitly enable Cloud Backup (a PRO feature).</p>
+          <p>Data you may enter into the App includes:</p>
+          <ul>
+            <li>Shop information (shop name, owner name, city, phone, email, optional logo).</li>
+            <li>Client records (name, phone, email, notes, visit history).</li>
+            <li>Client addresses (only if you enable Mobile Barber Mode — see section below).</li>
+            <li>Appointments, services, prices, durations, and payment status.</li>
+            <li>Tips received per appointment (if you enable tips tracking).</li>
+            <li>A 6-digit PIN and security question/answer for app access.</li>
+          </ul>
         </div>
 
         <div class="section">
-          <h2>How We Use Data</h2>
-          <p>Data is used solely to provide app functionality. Your email and encrypted password are used only to authenticate cloud backup and restore operations. We do not use your data for marketing or share it with third parties.</p>
+          <h2>Mobile Barber Mode &amp; Client Addresses</h2>
+          <p>The App offers three operating modes selectable during onboarding and editable in Settings: <strong>Local</strong> (clients come to you), <strong>Mobile</strong> (you travel to clients), or <strong>Both</strong> (hybrid).</p>
+          <p>If you select Mobile or Both, the App will allow you to store client addresses for appointments. These addresses are stored locally on your device only. When you tap a client address inside an appointment, the App opens Google Maps with the address as a destination — Google Maps is operated by Google and is subject to Google's Privacy Policy. We do not transmit client addresses to any server other than to your own Cloud Backup if you enable it.</p>
+          <p>You are solely responsible for obtaining your clients' consent before storing their addresses. We recommend asking clients verbally and only storing addresses for clients who explicitly agree.</p>
         </div>
 
         <div class="section">
-          <h2>Cloud Backup</h2>
-          <p>PRO users may optionally enable cloud backup. This sends your barbershop data to our secure servers (Supabase), protected by your email and encrypted password. You control when backups occur. You can delete your data at any time from the app settings.</p>
+          <h2>Tips Tracking</h2>
+          <p>If you enable tips tracking, the App allows you to record tip amounts received per completed appointment. This data is stored locally for your personal record-keeping and is included in Reports. <strong>You are solely responsible for tax reporting of any tips received.</strong> The App does not transmit tip data to tax authorities or any third party.</p>
         </div>
 
         <div class="section">
-          <h2>Google Play Billing</h2>
-          <p>Subscriptions ($9.99/month) are processed exclusively by Google Play. We do not store payment card information.</p>
+          <h2>How We Use Your Data</h2>
+          <p>Your data is used exclusively to operate the App on your device: managing your appointments, clients, services, reports, and tips. We do not analyze, sell, share, or use your data for advertising, profiling, or any commercial purpose other than providing the App's functionality. We do not have analytics or tracking SDKs in the App.</p>
+        </div>
+
+        <div class="section">
+          <h2>Subscriptions &amp; Payment Processing</h2>
+          <p>The PRO plan ($4.99/month) is processed through one of two payment processors depending on how you access the App:</p>
+          <ul>
+            <li><strong>Android (installed from Google Play):</strong> billing is processed exclusively by Google Play Billing. Charges appear on your Google Play account.</li>
+            <li><strong>Web / PWA / iOS browser:</strong> billing is processed by Stripe. You are redirected to a secure Stripe Checkout page to complete the purchase.</li>
+          </ul>
+          <p>We do not store, see, or process your payment card information. All card data is handled directly by Google Play or Stripe under their respective security standards (PCI-DSS). Stripe may store your payment method to process recurring monthly charges; you can manage or cancel your Stripe subscription at any time via the email receipt or by contacting us.</p>
+        </div>
+
+        <div class="section">
+          <h2>Cloud Backup (PRO Only)</h2>
+          <p>If you activate Cloud Backup, your data is encrypted in transit and stored on Supabase infrastructure (located in the United States). This includes shop information, clients, appointments, services, transactions, tips, and client addresses if applicable. You can disable Cloud Backup at any time from Settings and request deletion of your cloud-stored data by contacting us.</p>
         </div>
 
         <div class="section">
           <h2>Third-Party Services</h2>
-          <p>We use Supabase for optional cloud storage (PRO only) and Google Play for subscription billing. No data is shared with advertisers or analytics providers.</p>
+          <p>The App relies on the following third-party services. Each operates under its own privacy policy:</p>
+          <ul>
+            <li><strong>Google Play Billing</strong> — subscription processing on Android.</li>
+            <li><strong>Stripe</strong> — subscription processing on Web/PWA.</li>
+            <li><strong>Supabase</strong> — Cloud Backup storage (PRO only, opt-in).</li>
+            <li><strong>Google Maps</strong> — opens externally when you tap a client address (Mobile Mode only).</li>
+          </ul>
+          <p>We do not share your data with advertisers, analytics providers, or marketing platforms.</p>
         </div>
 
         <div class="section">
-          <h2>Data Retention</h2>
-          <p>Your data remains on your device indefinitely. Cloud backup data is retained until you delete it from the app or request deletion by emailing <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+          <h2>Data Retention &amp; Deletion</h2>
+          <p>Local data persists on your device until you uninstall the App or clear app data. Cloud Backup data persists until you disable it or request deletion. To request deletion of your cloud data, email <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a> from the email associated with your account; we will delete it within 30 days.</p>
         </div>
 
         <div class="section">
           <h2>Children's Privacy</h2>
-          <p>This app is intended for adult business owners and is not directed at children under 13.</p>
+          <p>The App is not directed to children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us information, contact us and we will delete it.</p>
+        </div>
+
+        <div class="section">
+          <h2>Security</h2>
+          <p>The App uses your device's local storage and a 6-digit PIN to protect access. Cloud Backup data is transmitted over HTTPS and encrypted at rest by Supabase. You are responsible for keeping your PIN confidential and your device secure. We are not liable for unauthorized access resulting from a compromised device or shared PIN.</p>
         </div>
 
         <div class="section">
           <h2>Your Rights</h2>
-          <p>You may request deletion of your cloud data at any time by emailing <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+          <p>You have the right to access, correct, or delete your personal data. Most data is fully under your control via the App itself (edit clients, delete appointments, clear data, uninstall). For Cloud Backup data, contact us to exercise your rights.</p>
         </div>
 
         <div class="section">
-          <h2>Changes</h2>
-          <p>We will update this page if the policy changes. The "Last updated" date will reflect any revisions.</p>
+          <h2>Changes to This Policy</h2>
+          <p>We may update this Policy occasionally. Material changes will be reflected by an updated "Last updated" date. Continued use of the App after changes constitutes acceptance.</p>
         </div>
 
         <div class="section">
           <h2>Contact</h2>
-          <p>Real App Solutions<br />
+          <p>Real App Solutions / NutzLabs<br />
           <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a><br />
           <a href="https://www.realappsolutions.com">https://www.realappsolutions.com</a></p>
         </div>
@@ -229,7 +170,7 @@
         <h1>Barber Master Suite</h1>
         <div class="meta">
           <span>Desarrollador: NutzLabs / Real App Solutions</span>
-          <span>Última actualización: Marzo 2026</span>
+          <span>Última actualización: Abril 2026</span>
           <span><a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a></span>
         </div>
       </div>
@@ -238,58 +179,95 @@
 
         <div class="section">
           <h2>Introducción</h2>
-          <p>Barber Master Suite es una aplicación de gestión de barberías para iOS y Android que ayuda a los barberos a administrar citas, clientes, servicios e informes de negocio.</p>
+          <p>Esta Política de Privacidad explica cómo Barber Master Suite ("la App", "nosotros") recopila, usa y protege tu información. La App es una herramienta de gestión personal diseñada para barberos individuales, disponible en Android vía Google Play y como Aplicación Web Progresiva (PWA) en <a href="https://barbersuite.realappsolutions.com">barbersuite.realappsolutions.com</a>. Al usar la App, aceptas esta Política.</p>
         </div>
 
         <div class="section">
-          <h2>Datos que recopilamos</h2>
-          <p>La aplicación recopila: nombre del negocio, nombre del propietario, ciudad, teléfono y correo electrónico (utilizado para la autenticación de copias de seguridad en la nube). La contraseña de respaldo se almacena como un hash cifrado — nunca almacenamos contraseñas en texto plano.</p>
-          <p>Los datos de citas, nombres de clientes, servicios e informes de negocio se almacenan localmente en su dispositivo.</p>
+          <h2>Datos que Recopilamos</h2>
+          <p>La App es local-first por diseño. Todos tus datos comerciales (clientes, citas, servicios, transacciones, propinas, direcciones de clientes) se almacenan directamente en tu dispositivo mediante localStorage del navegador. No transmitimos estos datos a nuestros servidores a menos que actives explícitamente el Respaldo en la Nube (función PRO).</p>
+          <p>Los datos que puedes ingresar en la App incluyen:</p>
+          <ul>
+            <li>Información del negocio (nombre, propietario, ciudad, teléfono, email, logo opcional).</li>
+            <li>Registros de clientes (nombre, teléfono, email, notas, historial).</li>
+            <li>Direcciones de clientes (solo si activas el Modo Barbero Móvil — ver sección abajo).</li>
+            <li>Citas, servicios, precios, duración y estado de pago.</li>
+            <li>Propinas recibidas por cita (si activas el seguimiento de propinas).</li>
+            <li>Un PIN de 6 dígitos y pregunta/respuesta de seguridad para acceder a la App.</li>
+          </ul>
         </div>
 
         <div class="section">
-          <h2>Cómo usamos sus datos</h2>
-          <p>Los datos se utilizan únicamente para proveer la funcionalidad de la aplicación. Su correo electrónico y contraseña cifrada se usan exclusivamente para autenticar las operaciones de copia de seguridad y restauración en la nube. No utilizamos sus datos con fines de marketing ni los compartimos con terceros.</p>
+          <h2>Modo Barbero Móvil y Direcciones de Clientes</h2>
+          <p>La App ofrece tres modos de operación seleccionables durante el onboarding y editables en Ajustes: <strong>Local</strong> (los clientes vienen a ti), <strong>Móvil</strong> (tú vas al cliente) o <strong>Ambos</strong> (híbrido).</p>
+          <p>Si seleccionas Móvil o Ambos, la App te permite almacenar direcciones de clientes para las citas. Estas direcciones se almacenan únicamente en tu dispositivo. Cuando tocas una dirección de cliente dentro de una cita, la App abre Google Maps con la dirección como destino — Google Maps es operado por Google y está sujeto a la Política de Privacidad de Google. No transmitimos direcciones de clientes a ningún servidor excepto al Respaldo en la Nube si lo activas.</p>
+          <p>Eres el único responsable de obtener el consentimiento de tus clientes antes de almacenar sus direcciones. Recomendamos preguntar verbalmente y guardar solo las direcciones de clientes que acepten explícitamente.</p>
         </div>
 
         <div class="section">
-          <h2>Copia de seguridad en la nube</h2>
-          <p>Los usuarios PRO pueden habilitar opcionalmente la copia de seguridad en la nube. Esto envía los datos de su barbería a nuestros servidores seguros (Supabase), protegidos por su correo electrónico y contraseña cifrada. Usted controla cuándo se realizan las copias de seguridad. Puede eliminar sus datos en cualquier momento desde la configuración de la aplicación.</p>
+          <h2>Seguimiento de Propinas</h2>
+          <p>Si activas el seguimiento de propinas, la App te permite registrar montos de propinas recibidas por cita completada. Estos datos se almacenan localmente para tu registro personal y se incluyen en los Reportes. <strong>Eres el único responsable de declarar fiscalmente cualquier propina recibida.</strong> La App no transmite datos de propinas a autoridades fiscales ni a terceros.</p>
         </div>
 
         <div class="section">
-          <h2>Facturación de Google Play</h2>
-          <p>Las suscripciones ($9.99/mes) son procesadas exclusivamente por Google Play. No almacenamos información de tarjetas de pago.</p>
+          <h2>Cómo Usamos tus Datos</h2>
+          <p>Tus datos se usan exclusivamente para operar la App en tu dispositivo: gestionar citas, clientes, servicios, reportes y propinas. No analizamos, vendemos, compartimos ni usamos tus datos para publicidad, perfilado o cualquier propósito comercial distinto a proveer la funcionalidad de la App. La App no contiene SDKs de analítica ni de seguimiento.</p>
         </div>
 
         <div class="section">
-          <h2>Servicios de terceros</h2>
-          <p>Utilizamos Supabase para el almacenamiento en la nube opcional (solo versión PRO) y Google Play para la facturación de suscripciones. Ningún dato se comparte con anunciantes ni proveedores de analítica.</p>
+          <h2>Suscripciones y Procesamiento de Pagos</h2>
+          <p>El plan PRO ($4.99/mes) se procesa a través de uno de dos procesadores de pago según cómo accedas a la App:</p>
+          <ul>
+            <li><strong>Android (instalada desde Google Play):</strong> la facturación es procesada exclusivamente por Google Play Billing. Los cargos aparecen en tu cuenta de Google Play.</li>
+            <li><strong>Web / PWA / navegador iOS:</strong> la facturación es procesada por Stripe. Eres redirigido a una página segura de Stripe Checkout para completar la compra.</li>
+          </ul>
+          <p>No almacenamos, vemos ni procesamos información de tu tarjeta de pago. Todos los datos de tarjeta son gestionados directamente por Google Play o Stripe bajo sus respectivos estándares de seguridad (PCI-DSS). Stripe puede almacenar tu método de pago para procesar cargos mensuales recurrentes; puedes gestionar o cancelar tu suscripción Stripe en cualquier momento mediante el recibo por correo o contactándonos.</p>
         </div>
 
         <div class="section">
-          <h2>Retención de datos</h2>
-          <p>Sus datos permanecen en su dispositivo de forma indefinida. Los datos de la copia de seguridad en la nube se conservan hasta que usted los elimine desde la aplicación o solicite su eliminación enviando un correo a <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+          <h2>Respaldo en la Nube (Solo PRO)</h2>
+          <p>Si activas el Respaldo en la Nube, tus datos se cifran en tránsito y se almacenan en infraestructura de Supabase (ubicada en Estados Unidos). Esto incluye información del negocio, clientes, citas, servicios, transacciones, propinas y direcciones de clientes si aplica. Puedes desactivar el Respaldo en cualquier momento desde Ajustes y solicitar la eliminación de tus datos en la nube contactándonos.</p>
         </div>
 
         <div class="section">
-          <h2>Privacidad de menores</h2>
-          <p>Esta aplicación está dirigida a propietarios de negocios adultos y no está destinada a menores de 13 años.</p>
+          <h2>Servicios de Terceros</h2>
+          <p>La App utiliza los siguientes servicios de terceros. Cada uno opera bajo su propia política de privacidad:</p>
+          <ul>
+            <li><strong>Google Play Billing</strong> — procesamiento de suscripciones en Android.</li>
+            <li><strong>Stripe</strong> — procesamiento de suscripciones en Web/PWA.</li>
+            <li><strong>Supabase</strong> — almacenamiento del Respaldo en la Nube (solo PRO, opcional).</li>
+            <li><strong>Google Maps</strong> — se abre externamente al tocar la dirección de un cliente (solo Modo Móvil).</li>
+          </ul>
+          <p>No compartimos tus datos con anunciantes, proveedores de analítica ni plataformas de marketing.</p>
         </div>
 
         <div class="section">
-          <h2>Sus derechos</h2>
-          <p>Usted puede solicitar la eliminación de sus datos en la nube en cualquier momento enviando un correo electrónico a <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a>.</p>
+          <h2>Retención y Eliminación de Datos</h2>
+          <p>Los datos locales persisten en tu dispositivo hasta que desinstales la App o borres los datos de la aplicación. Los datos del Respaldo en la Nube persisten hasta que lo desactives o solicites la eliminación. Para solicitar la eliminación de tus datos en la nube, envía un email a <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a> desde el correo asociado a tu cuenta; los eliminaremos en un plazo de 30 días.</p>
         </div>
 
         <div class="section">
-          <h2>Cambios en esta política</h2>
-          <p>Actualizaremos esta página si la política cambia. La fecha de "Última actualización" reflejará cualquier revisión.</p>
+          <h2>Privacidad de Menores</h2>
+          <p>La App no está dirigida a menores de 13 años. No recopilamos a sabiendas información personal de niños. Si crees que un menor nos ha proporcionado información, contáctanos y la eliminaremos.</p>
+        </div>
+
+        <div class="section">
+          <h2>Seguridad</h2>
+          <p>La App utiliza el almacenamiento local de tu dispositivo y un PIN de 6 dígitos para proteger el acceso. Los datos del Respaldo en la Nube se transmiten por HTTPS y se cifran en reposo por Supabase. Eres responsable de mantener tu PIN confidencial y tu dispositivo seguro. No somos responsables por accesos no autorizados resultantes de un dispositivo comprometido o un PIN compartido.</p>
+        </div>
+
+        <div class="section">
+          <h2>Tus Derechos</h2>
+          <p>Tienes derecho a acceder, corregir o eliminar tus datos personales. La mayoría de los datos están bajo tu control directo desde la App (editar clientes, eliminar citas, borrar datos, desinstalar). Para datos del Respaldo en la Nube, contáctanos para ejercer tus derechos.</p>
+        </div>
+
+        <div class="section">
+          <h2>Cambios a esta Política</h2>
+          <p>Podemos actualizar esta Política ocasionalmente. Los cambios materiales se reflejarán mediante una fecha actualizada de "Última actualización". El uso continuado de la App tras los cambios constituye aceptación.</p>
         </div>
 
         <div class="section">
           <h2>Contacto</h2>
-          <p>Real App Solutions<br />
+          <p>Real App Solutions / NutzLabs<br />
           <a href="mailto:hola@realappsolutions.com">hola@realappsolutions.com</a><br />
           <a href="https://www.realappsolutions.com">https://www.realappsolutions.com</a></p>
         </div>
@@ -299,7 +277,7 @@
     </main>
 
     <footer>
-      <p>&copy; 2026 Real App Solutions · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a></p>
+      <p>&copy; 2026 Real App Solutions · <a href="/barber-master-suite-privacy">Privacy Policy</a> · <a href="/barber-master-suite-terms">Terms of Use</a></p>
     </footer>
 
   </body>
